@@ -1,0 +1,253 @@
+﻿================================================================================
+EXECUTION TRACE: S07 (SYMMETRIC gw3_m6)
+Algorithm:          LBMP_PURE
+Start Time:         2026-11-23T14:18:38.466
+End Time:           2026-11-23T14:19:44.261
+Duration:           65.795s
+Exit Code:          0
+Termination Reason: PROCESS_COMPLETED
+================================================================================
+--- STDOUT ---
+================================================================================
+ LAMP BASELINE SIMULATION RUNNER � LBMP_PURE (SYMMETRIC)
+ Workload: 3gw_6mob | Gateways: 3 | Total Apps: 18
+ Simulation Duration: 2000 simulation ticks
+================================================================================
+Creating Cloud_Storage_0_0 on device cloud
+Creating Interface_0_0 on device m-0-0
+Creating Sensor_Analyzer_0_0 on device d-0
+Creating Cloud_Storage_0_1 on device cloud
+Creating Interface_0_1 on device m-0-1
+Creating Sensor_Analyzer_0_1 on device d-0
+Creating Interface_0_2 on device m-0-2
+Creating Cloud_Storage_0_2 on device cloud
+Creating Sensor_Analyzer_0_2 on device d-0
+Creating Cloud_Storage_0_3 on device cloud
+Creating Interface_0_3 on device m-0-3
+Creating Sensor_Analyzer_0_3 on device d-0
+Creating Cloud_Storage_0_4 on device cloud
+Creating Interface_0_4 on device m-0-4
+Creating Sensor_Analyzer_0_4 on device d-1
+Creating Cloud_Storage_0_5 on device cloud
+Creating Sensor_Analyzer_0_5 on device d-1
+Creating Interface_0_5 on device m-0-5
+Creating Cloud_Storage_1_0 on device cloud
+Creating Interface_1_0 on device m-1-0
+Creating Sensor_Analyzer_1_0 on device d-1
+Creating Interface_1_1 on device m-1-1
+Creating Cloud_Storage_1_1 on device cloud
+Creating Sensor_Analyzer_1_1 on device d-1
+Creating Cloud_Storage_1_2 on device cloud
+Creating Interface_1_2 on device m-1-2
+Creating Sensor_Analyzer_1_2 on device d-2
+Creating Cloud_Storage_1_3 on device cloud
+Creating Interface_1_3 on device m-1-3
+Creating Sensor_Analyzer_1_3 on device d-2
+Creating Cloud_Storage_1_4 on device cloud
+Creating Sensor_Analyzer_1_4 on device d-2
+Creating Interface_1_4 on device m-1-4
+Creating Cloud_Storage_1_5 on device cloud
+Creating Sensor_Analyzer_1_5 on device d-2
+Creating Interface_1_5 on device m-1-5
+Creating Interface_2_0 on device m-2-0
+Creating Cloud_Storage_2_0 on device cloud
+Creating Sensor_Analyzer_2_0 on device proxy-server
+Creating Cloud_Storage_2_1 on device cloud
+Creating Interface_2_1 on device m-2-1
+Creating Sensor_Analyzer_2_1 on device proxy-server
+Creating Cloud_Storage_2_2 on device cloud
+Creating Interface_2_2 on device m-2-2
+Creating Sensor_Analyzer_2_2 on device proxy-server
+Creating Cloud_Storage_2_3 on device cloud
+Creating Sensor_Analyzer_2_3 on device proxy-server
+Creating Interface_2_3 on device m-2-3
+Creating Sensor_Analyzer_2_4 on device cloud
+Creating Cloud_Storage_2_4 on device cloud
+Creating Interface_2_4 on device m-2-4
+Creating Sensor_Analyzer_2_5 on device cloud
+Creating Cloud_Storage_2_5 on device cloud
+Creating Interface_2_5 on device m-2-5
+
+[LBMP_PURE Placement Distribution & Telemetry]
+  Sensor_Analyzer on Local Gateway:  6
+  Sensor_Analyzer on Peer Gateway:   6
+  Sensor_Analyzer on Proxy Server:   4
+  Sensor_Analyzer on Cloud (Normal): 2
+  Sensor_Analyzer on Cloud (Fallback):0
+  Total Analyzers: 18 (Expected: 18)
+  Planned System Modules -> Fog: 34 | Cloud: 20 | Grand Total: 54 (Expected: 54)
+  CloudSim VM Instantiation -> Success: 54 | Failures: 0
+  Search Telemetry -> BinarySearch: 18 | LinearFallback: 0
+  Cumulative Cloud Fallback Demand -> MIPS: 0.0 | RAM: 0 MB | BW: 0
+
+[Final Candidate Node Remaining Ledger]
+  d-0 -> remaining=<MIPS=0.0, RAM=3960 MB, BW=996000> (initial=<MIPS=2800.0, RAM=4000 MB, BW=1000000>)
+  d-1 -> remaining=<MIPS=0.0, RAM=3960 MB, BW=996000> (initial=<MIPS=2800.0, RAM=4000 MB, BW=1000000>)
+  d-2 -> remaining=<MIPS=0.0, RAM=3960 MB, BW=996000> (initial=<MIPS=2800.0, RAM=4000 MB, BW=1000000>)
+  proxy-server -> remaining=<MIPS=0.0, RAM=3960 MB, BW=996000> (initial=<MIPS=2800.0, RAM=4000 MB, BW=1000000>)
+  cloud -> remaining=<MIPS=43400.0, RAM=39800 MB, BW=980000> (initial=<MIPS=44800.0, RAM=40000 MB, BW=1000000>)
+
+[Analytical Module-to-Device Mappings]
+  Sensor_Analyzer_0_0 -> d-0 [LOCAL_GW]
+  Sensor_Analyzer_0_1 -> d-0 [LOCAL_GW]
+  Sensor_Analyzer_0_2 -> d-0 [LOCAL_GW]
+  Sensor_Analyzer_0_3 -> d-0 [LOCAL_GW]
+  Sensor_Analyzer_0_4 -> d-1 [PEER_GW]
+  Sensor_Analyzer_0_5 -> d-1 [PEER_GW]
+  Sensor_Analyzer_1_0 -> d-1 [LOCAL_GW]
+  Sensor_Analyzer_1_1 -> d-1 [LOCAL_GW]
+  Sensor_Analyzer_1_2 -> d-2 [PEER_GW]
+  Sensor_Analyzer_1_3 -> d-2 [PEER_GW]
+  Sensor_Analyzer_1_4 -> d-2 [PEER_GW]
+  Sensor_Analyzer_1_5 -> d-2 [PEER_GW]
+  Sensor_Analyzer_2_0 -> proxy-server [PROXY]
+  Sensor_Analyzer_2_1 -> proxy-server [PROXY]
+  Sensor_Analyzer_2_2 -> proxy-server [PROXY]
+  Sensor_Analyzer_2_3 -> proxy-server [PROXY]
+  Sensor_Analyzer_2_4 -> cloud [CLOUD_NORMAL]
+  Sensor_Analyzer_2_5 -> cloud [CLOUD_NORMAL]
+0.0 Submitted application app_0_0
+0.0 Submitted application app_0_2
+0.0 Submitted application app_1_1
+0.0 Submitted application app_2_0
+0.0 Submitted application app_0_1
+0.0 Submitted application app_1_0
+0.0 Submitted application app_0_4
+0.0 Submitted application app_1_3
+0.0 Submitted application app_2_2
+0.0 Submitted application app_0_3
+0.0 Submitted application app_1_2
+0.0 Submitted application app_2_1
+0.0 Submitted application app_1_5
+0.0 Submitted application app_2_4
+0.0 Submitted application app_0_5
+0.0 Submitted application app_1_4
+0.0 Submitted application app_2_3
+0.0 Submitted application app_2_5
+=========================================
+============== RESULTS ==================
+=========================================
+EXECUTION TIME : 59636
+=========================================
+APPLICATION LOOP DELAYS
+=========================================
+[ECG_0_0, Interface_0_0, Sensor_Analyzer_0_0, Interface_0_0, DISPLAY_0_0] ---> 455.4603905325296
+[ECG_0_1, Interface_0_1, Sensor_Analyzer_0_1, Interface_0_1, DISPLAY_0_1] ---> 456.27013017751375
+[ECG_0_2, Interface_0_2, Sensor_Analyzer_0_2, Interface_0_2, DISPLAY_0_2] ---> 455.7614082840232
+[ECG_0_3, Interface_0_3, Sensor_Analyzer_0_3, Interface_0_3, DISPLAY_0_3] ---> 451.51143195266263
+[ECG_0_4, Interface_0_4, Sensor_Analyzer_0_4, Interface_0_4, DISPLAY_0_4] ---> null
+[ECG_0_5, Interface_0_5, Sensor_Analyzer_0_5, Interface_0_5, DISPLAY_0_5] ---> null
+[ECG_1_0, Interface_1_0, Sensor_Analyzer_1_0, Interface_1_0, DISPLAY_1_0] ---> 391.16676923076716
+[ECG_1_1, Interface_1_1, Sensor_Analyzer_1_1, Interface_1_1, DISPLAY_1_1] ---> 391.0336410256411
+[ECG_1_2, Interface_1_2, Sensor_Analyzer_1_2, Interface_1_2, DISPLAY_1_2] ---> null
+[ECG_1_3, Interface_1_3, Sensor_Analyzer_1_3, Interface_1_3, DISPLAY_1_3] ---> null
+[ECG_1_4, Interface_1_4, Sensor_Analyzer_1_4, Interface_1_4, DISPLAY_1_4] ---> null
+[ECG_1_5, Interface_1_5, Sensor_Analyzer_1_5, Interface_1_5, DISPLAY_1_5] ---> null
+[ECG_2_0, Interface_2_0, Sensor_Analyzer_2_0, Interface_2_0, DISPLAY_2_0] ---> 403.5354051282043
+[ECG_2_1, Interface_2_1, Sensor_Analyzer_2_1, Interface_2_1, DISPLAY_2_1] ---> 412.10494358973693
+[ECG_2_2, Interface_2_2, Sensor_Analyzer_2_2, Interface_2_2, DISPLAY_2_2] ---> 424.8752307692309
+[ECG_2_3, Interface_2_3, Sensor_Analyzer_2_3, Interface_2_3, DISPLAY_2_3] ---> 422.8224845360825
+[ECG_2_4, Interface_2_4, Sensor_Analyzer_2_4, Interface_2_4, DISPLAY_2_4] ---> 655.9219041916177
+[ECG_2_5, Interface_2_5, Sensor_Analyzer_2_5, Interface_2_5, DISPLAY_2_5] ---> 657.4392934131428
+=========================================
+TUPLE CPU EXECUTION DELAY
+=========================================
+STORE_PROCESS_COMPUTE_2_5 ---> 0.022474907241620084
+STORE_PROCESS_COMPUTE_2_3 ---> 0.022321428571331126
+STORE_PROCESS_COMPUTE_2_4 ---> 0.06883255920982549
+PATIENT_STATE_1_1 ---> 3.4439089439751047
+PATIENT_STATE_1_0 ---> 1.512479925521804
+STORE_PROCESS_COMPUTE_2_1 ---> 0.022321428571331126
+STORE_PROCESS_COMPUTE_0_3 ---> 0.022425314256755893
+STORE_PROCESS_COMPUTE_2_2 ---> 0.022321428571331126
+STORE_PROCESS_COMPUTE_0_1 ---> 0.022773916500255634
+STORE_PROCESS_COMPUTE_2_0 ---> 0.022321433908230322
+STORE_PROCESS_COMPUTE_0_2 ---> 0.025679222319027528
+STORE_PROCESS_COMPUTE_0_0 ---> 0.03492120304124029
+ECG_1_5 ---> 2.0
+ECG_1_4 ---> 2.0
+PATIENT_STATE_2_5 ---> 1.4579639200949845
+ENHANCED_SENSOR_0_0 ---> 110.02465131302864
+ENHANCED_SENSOR_0_1 ---> 104.90294023922635
+ENHANCED_SENSOR_0_2 ---> 109.42531754520971
+ENHANCED_SENSOR_2_0 ---> 94.96179822415792
+ECG_1_3 ---> 2.0
+ENHANCED_SENSOR_2_5 ---> 0.20264533372320756
+ECG_1_2 ---> 2.0
+ECG_1_1 ---> 4.556087225330449
+ECG_1_0 ---> 4.208561557310358
+ENHANCED_SENSOR_0_3 ---> 109.79761469405017
+ENHANCED_SENSOR_2_1 ---> 94.95321981712216
+ENHANCED_SENSOR_2_2 ---> 94.71565250619174
+ENHANCED_SENSOR_2_3 ---> 100.27247375062109
+ENHANCED_SENSOR_2_4 ---> 0.1707503564587366
+PATIENT_STATE_2_4 ---> 2.5964221913863024
+PATIENT_STATE_2_3 ---> 1.367863693468773
+PATIENT_STATE_2_2 ---> 1.5383682521074515
+PATIENT_STATE_0_3 ---> 2.278861953043444
+PATIENT_STATE_2_1 ---> 2.3736631268178776
+PATIENT_STATE_0_2 ---> 2.943769019481002
+PATIENT_STATE_2_0 ---> 2.8753154685040405
+PATIENT_STATE_0_1 ---> 3.4374380769007447
+PATIENT_STATE_0_0 ---> 1.6582344496415735
+STORE_PROCESS_COMPUTE_1_0 ---> 0.0446436045288514
+STORE_PROCESS_COMPUTE_1_1 ---> 0.029346358544433893
+ECG_2_5 ---> 4.121427673831749
+ECG_2_4 ---> 4.3767858931239605
+ECG_0_5 ---> 2.0
+ECG_2_3 ---> 4.540452485647676
+ENHANCED_SENSOR_1_0 ---> 5.051590831776605
+ENHANCED_SENSOR_1_1 ---> 4.956644398899034
+ECG_0_4 ---> 2.0
+ECG_2_2 ---> 4.203390769166678
+ECG_0_3 ---> 4.920318741806669
+ECG_2_1 ---> 4.178775538492065
+ECG_0_2 ---> 4.923452024136003
+ECG_2_0 ---> 3.8514035785155434
+ECG_0_1 ---> 4.881476444355709
+ECG_0_0 ---> 4.792039922447385
+=========================================
+cloud : Energy Consumed = 2773002.106650246
+proxy-server : Energy Consumed = 214678.0000000019
+d-0 : Energy Consumed = 214678.0000000015
+m-0-0 : Energy Consumed = 174880.24155999915
+m-0-1 : Energy Consumed = 174908.83717999936
+m-0-2 : Energy Consumed = 174999.06251999922
+m-0-3 : Energy Consumed = 174798.45543999877
+m-0-4 : Energy Consumed = 169181.05000000083
+m-0-5 : Energy Consumed = 169181.05000000083
+d-1 : Energy Consumed = 214668.67677700138
+m-1-0 : Energy Consumed = 175029.45999999932
+m-1-1 : Energy Consumed = 175029.45999999944
+m-1-2 : Energy Consumed = 169181.05000000083
+m-1-3 : Energy Consumed = 169181.05000000083
+m-1-4 : Energy Consumed = 169181.05000000083
+m-1-5 : Energy Consumed = 169181.05000000083
+d-2 : Energy Consumed = 214677.99999999994
+m-2-0 : Energy Consumed = 174360.50165999925
+m-2-1 : Energy Consumed = 174794.8517199992
+m-2-2 : Energy Consumed = 174969.5710599993
+m-2-3 : Energy Consumed = 174707.1611999993
+m-2-4 : Energy Consumed = 174329.90057999943
+m-2-5 : Energy Consumed = 174241.4160199934
+Cost of execution in cloud = 154534.6322131522
+Total network usage = 615769.0
+
+================================================================================
+LBMP_PURE EXPERIMENT RESULTS (SYMMETRIC)
+Algorithm: LBMP_PURE | Workload: 3gw_6mob | Total Apps: 18
+Loop Delay (sim ticks): 460.3947
+Loops Completed: 12 / 18 (Executions: 2179)
+Cloud Energy (J): 2773002.1067
+Fog Energy (J): 3970837.8957
+Cloud Cost ($): 154534.632213
+Network Usage: 615769.0000
+Status: PARTIAL_COMPLETION
+================================================================================
+LBMP_SYMM_CSV_ROW:LBMP_PURE,3,6,18,460.3947,2773002.1067,3970837.8957,154534.632213,615769.0000,6,6,4,2,0,34,20,54,54,0,18,0,0.0,0,0,12,PARTIAL_COMPLETION
+
+--- STDERR ---
+
+================================================================================
+END OF RAW LOG
+================================================================================

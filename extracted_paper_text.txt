@@ -1,0 +1,614 @@
+
+=== PAGE 1 ===
+       
+     
+    
+5th Conference on Knowledge-Based Engineering and Innovation (KBEI),Iran university of science and technology, 
+Tehran, Iran
+LAMP: A Hybrid Fog-Cloud Latency-Aware Module
+Placement Algorithm for IoT Applications
+Zahra Rezazadeh
+Department of Computer
+Engineering and Information
+Technology
+The University of Qom
+Qom, Iran
+Email: z.rezazadeh@stu.qom.ac.ir
+Mahboobe Rezaei
+Department of Computer
+Engineering and Information
+Technology
+The University of Qom
+Qom, Iran
+Email: m.rezaee@stu.qom.ac.ir
+Mohsen Nickray
+Department of Computer
+Engineering and Information
+Technology
+The University of Qom
+Qom, Iran
+Email: m.nickray@qom.ac.ir
+Abstract—The delay in the transmission of data to the cloud
+and their return impacts on applications performance. Hence, Fog
+computing with transferring the cloud services to the edge of the
+network causes to decrease the delay in services of applications
+such as healthcare, online games, and other IoT applications.
+Moreover, Fog computing reduces the cost and energy consump-
+tion of cloud data centers. One of the most important issues in fog
+computing is the placement of modules of IoT application on fog
+devices at the edge of the network to have a minimum of latency
+and the highest performance. In this paper, we propose a latency-
+aware module placement algorithm in Fog-Cloud environment,
+called LAMP, which is an exploratory algorithm for the optimal
+application modules placement into devices. LAMP provides less
+delay for IoT applications with reducing the distance between
+the host device modules. Consequently, improves the functionality
+of IoT applications. We use iFogsim simulator and evaluate the
+proposed algorithm compared to four strategies of placing in the
+fog-cloud environment. According to our results of the simulation,
+the efﬁciency of the proposed algorithm is guaranteed.
+Keywords— Fog computing, Cloud computing, Internet of
+Things (IoT), resource management, Healthcare, module place-
+ment.
+I. INTRODUCTION
+The Internet of Things (IoT) is expanding rapidly because
+its purpose is to connect any object to the Internet to talk to
+each other [ 1]. According to the report in [ 2, 3], predicted by
+the year 2025 about 1 trillion devices will be connected to the
+Internet which is the threat to storage and computing systems.
+Because which objects and IoT applications connected to the
+internet will produce a lot of data. One way to deal with
+this problem is cloud computing which provides resources
+and infrastructures for storing and computing IoT applications.
+However, in delay-sensitive services, sending data to the cloud
+and returning their response can reduce the value of data.
+consequently, affect the effectiveness of cloud computing. To
+resolve this shortcoming, the new concept called Fog Comput-
+ing was raised. [ 4, 5]. Fog computing is a system between the
+cloud and IoT that extends cloud services to the network edge.
+In fog computing, computing performs by physical devices in
+real-time because these devices (fog devices) distributed in
+the network edge and are close to the user[ 6, 7, 8]. Several
+applications put in the fog devices that each of which includes
+several modules. Placing the application modules at the start
+of the network is said static placement and when the network
+is active and the placement of modules in the network is
+optimized is said dynamic placement. Fog devices near the
+edge of the network such as micro-data centers, routers, access
+points, gateways and etc, do not have enough resources to host
+all the modules of IoT applications (or heterogeneous modules
+of different applications for that topic).
+Hence, in this paper, we introduce a latency-aware strategy
+for placing modules based on the hierarchical structure of
+fog computing, called LAMP , which with the optimal use
+of resources in cloud data centers and fog devices reduce
+the response time. This paper evaluates the performance of
+LAMP algorithm compare to Cloud-Only Module Placement
+(COMP), Lower-Bound Module Placement (LBMP) which
+is introduced in [ 3], Simulated-Annealing Module Placement
+(SAMP) in [ 9] and Edge-Wards Module Placement (EWMP)
+algorithm scale simulations, by using iFogsim simulator [ 2].
+This simulator employs for simulation of resource management
+techniques in the IoT, Edge and Fog Computing Environments.
+Our contributions in this paper are:
+1) Introducing an algorithm for placing application modules
+on fog-cloud devices based on fog-clod hierarchical struc-
+ture.
+2) Efﬁcient use of fog-cloud resources.
+3) Evaluating the proposed algorithm using the health-care
+application in compression with four strategies for placing
+in the fog-cloud environment.
+The rest of the article is as follows: Section II, presents a
+summary of related studies, and section III introduces the
+model of the system and the application of healthcare. In
+section IV, the main problem and the proposed algorithm
+displays and section V illustrates the implementation and
+evaluation of simulation results. Finally, section VI describes
+the conclusions and future work.
+II. RELATED WORK
+Fog computing is a new topic for researchers. Current
+research focuses on deﬁning the architecture of the fog
+computing [ 10, 11, 12, 13], assessing its suitability for the
+IoT [ 14, 15, 16], introducing platforms for simulating this
+environment [ 17, 18, 19], considering safety and privacy
+[20, 21, 22, 23], resource management in fog computing,
+978-1-7281-0872-8/19/$31.00 2019 IEEE
+845
+=== PAGE 2 ===
+programming approaches for the development of the IoT
+applications [24], and so on. For example, Mahmoud et al. [5],
+have classiﬁed information on the challenges of fog computing
+as an intermediate layer between IoT devices and cloud data
+centers. Skarlat et al .[25], have introduced an architecture for
+the fog computing framework and a service optimization
+problem in fog and presented several approaches to problem-
+solving, including genetic algorithm, and the results in both
+cloud and fog computing environments. The reference [ 26],
+based on the requirements for the development, deployment,
+and management of IoT applications for component-based
+content, proposes a platform architecture as a service to facil-
+itate the implementation of applications in the fog computing
+environment.
+One of the most important issues in fog computing is place-
+ment application modules on the fog network devices, which
+Hong et al .[27] have introduced a dynamic distribution algo-
+rithm for the fog computing and then compared in real terms
+to the optimal solution, with efﬁcient results the algorithm
+is represented. Taneja et al .[3] presented a module mapping
+algorithm for the placement of application modules in dis-
+tributed cloud-fog devices. Their goal was to make good use of
+resources on the network. This algorithm maps the application
+modules and fog devices according to the existing requirements
+and capacity. They have also shown that in a delay, a cloud-
+fog approach is more effective than the cloud-only approach.
+But they focus more on reducing the use of resources for
+distributed applications and the delay is not taken. Gupta et
+al.[2] have introduced ifogsim to model and simulate the fog
+environment, the IoT and the edge of the network. In this
+simulator, you can evaluate resource management techniques
+based on service quality criteria, such as delays in various work
+volumes in the fog.
+Our current work and the work of others to enable the use
+of fog computing as a platform provide better service to
+the end user and increase the network efﬁciency of existing
+infrastructure and intelligent technology scenarios.
+III. SYSTEM AND APPLICATION MODULE
+DESCRIPTION
+The fog computing is expanded by the traditional cloud
+model, which can be applied in architectural implementations
+in several layers of network technology [ 4]. In this paper, we
+consider the three-level hierarchical model shown in Fig. 1. As
+you see, at the ﬁrst level, the cloud data center is located
+that is considered as unlimited resources on the network. The
+middle layer is fog, and the ﬁnal layer of this hierarchy is IoT
+devices such as sensors and devices that are in contact with
+the end user. In this architecture, the layer of fog devices can
+include more layers. Any element in a network that is capable
+of hosting applications is considered as a fog device [ 28]. Each
+fog device has a speciﬁc and limited computing capability (due
+to hardware limitation of resources per device), which in turn
+forms the resources available on that layer [ 3].
+A. APPLICATION MODULE
+We consider IoT applications based on the Distributed Data
+Flow (DDF) model because provides better results for multi-
+component applications [ 3]. Also, We employ to implement
+these modules in the proposed algorithm from the Directed
+Fig. 1. Hierarchical architecture of Fog-Cloud computing
+Acyclic Graph (DAG) model. Because application modules
+are interdependent. After inserting the input module, the cor-
+responding data ﬂow identiﬁes the next module for placement.
+Additionally, if a module is assigned to its own resources,
+it is expected that the module will execute its operation at
+a ﬁxed time. Each application has an input module, which
+informs the program’s basic information such as authentica-
+tion, a frequency of data signal measurement, metadata of
+the next application modules, and their interconnection with
+the system through this module. After the deployment of all
+modules, the input module communicates directly with IoT
+application with a particular program to capture sensitive data
+signals and delivers its data to the subsequent modules for
+further processing. After processing by other modules, the
+response is applied by the input module to the actuators. Since
+the input module plays the role of the root component for
+applications and is directly related to sensors and actuators, it
+should be placed on low-end devices. The applications work
+on the Sense-Process-Actuate model, which is the information
+collected by the sensors that are issued as the data stream and is
+processed by the application modules running in the fog layer.
+Then the commands (or outputs) are sent to the actuator and
+ﬂow processing model. The application modules, which are
+running on the fog layer, process the data ﬂow of the sensors
+and collected information forward to the cloud data center for
+the Restoration. Applications can be implemented in different
+network topologies and there is a graphical user interface in the
+iFogsim simulator for designing or adding network topology.
+In this article, we have evaluated applications from [ 24] which
+introduced a model of healthcare applications including main
+interface, sensor analyzer and cloud storage. As shown in
+Fig.2, the BSN functional model, which is built with fog
+architecture, has a sensor node, two actuators, and three main
+processing modules. They show the input-output relationship
+between the modules. The function of each module is as
+follows:
+Interface: This module receives and conﬁrms the raw ECG
+signals generated by the sensors. It rejects any possible discrep-
+ancy between the data and examines their synchronization. At
+this stage, data management includes data alert, automatic data
+correction, data transfer, and data separation. The information
+is then transferred to the sensor analyzer module to further
+process and analyze data. This module also updates current
+patient’s ECG reports.
+846
+=== PAGE 3 ===
+Fig. 2. Directed Acyclic Graph (DAG) of the application model
+TABLE I. DESCRIPTION OF EDGES IN ECG APPLICATION MODEL
+Tuple Type Source Destination CPU Length
+(MIPS)
+Network
+Length
+SENSOR DA TA ECG Interface 2000 500
+ENHANCED SENSOR Interface Sensor Analyzer 3500 500
+PA TIENTSTA TE Sensor
+Analyzer
+Interface 14 500
+PA TIENTSTA TE
+UPDA TE
+Interface DISPLA Y 1000 500
+PA TIENTCURRENT
+STA TE UPDA TE
+Sensor
+Analyzer
+DISPL Y PHYSI-
+CIAN
+14 500
+STORE PROCESS
+COMPUTE
+Sensor
+Analyzer
+Cloud Storage 1000 1000
+PA TIENTLONG
+TERM EV ALUA TION
+Cloud
+Storage
+DISPL Y PHYSI-
+CIAN
+1000 1000
+Sensor Analyzer : This module receives input data from the
+interface and analyzes them. In the analysis, extracted values
+and the patients’ status are updated, and abnormal values of
+ECG are reported to the physician so that any immediate help
+is needed. This module sends the analysis response to the
+interface module and updates the patient’s current status. This
+module is connected to the DISPLA Y PHYSICIAN actuator
+so that the physician can receive the patient’s continuous and
+online status.
+Cloud Storage : Data processed and analyzed by the sensor
+analyzer module is stored in the cloud by this module. The data
+include the long-term history of the patient, which provides
+long-term analysis of patient health over a long period of time.
+This module will provide physicians with a medical history
+by the interface. The edges connect the application modules
+so that they can communicate and process the data. The edges
+have different tuples, the characteristics of which are given
+in Table I. This table demonstrates the tuple type, the CPU
+length, the network length, the source and the destination. It
+should be noted that CPU length and network length depends
+on the source and destination.
+IV. MODULE PLACEMENT PROBLEM AND
+PROPOSED ALGORITHM
+Fog devices have capacity constraints for hosting applica-
+tion modules. Hence, IoT applications must run on fog-cloud
+devices and we should consider a policy that can be placed
+in cloud and fog. IoT application modules can locate stati-
+cally and or dynamically. In Static placement modules prime
+locate into fog devices and then begins processing. V ersus,
+TABLE II. DEFINITION OF SYMBOLS
+Symbols Explanations
+F Set of all network devices.
+A Set of all applications.
+M Set of all application modules.
+R Set of all resources (e.g. CPU, memory, bandwidth, etc.).
+Ma Set of all modules belonging to the application a so that a 2 A.
+Mf Set of all modules that ”f” fog device can accept so that f 2 F .
+f ′ Set of host devices for application modules a so that F ′  F .
+Cf Capacity of each device f to host modules (e.g. CPU, memory,
+bandwidth, etc.) so that Cf  R.
+Rm Required resource module m from application a (e.g. CPU, mem-
+ory, bandwidth, etc.) so that m 2 Ma.
+Qmf Time required to process the module m from the application a on
+the device f so that f 2 F ′.
+∆pp′ Delay between two devices that host the two modules are current
+and previous. p (Current device) and p′ (next device) .
+tm
+a The processing time delay from module 1 to m is in the application
+”a”.
+Z Network latency to current device.
+in dynamic placement after running applications, migrating
+modules locate to reduce energy consumption, and delay. Also,
+to reduce the latency of IoT applications in fog layer, modules
+can be run on devices close together and or optimizing of the
+processing time in the modules. In the following, we explain
+our algorithm that statically locates modules on devices close
+together. The adopted variables are deﬁned in Table II.
+Considering mentioned variables, Given the processing
+time of the data in the module ” m” of the application ” a” at
+host” f ”, we can see the total time needed to execute the” a”
+application modules with Eq. 1:
+Ma∑
+i=1
+Qmif = Tm (1)
+According to data dependency in the application modules,
+the generated output from the module as a input send to
+another module. Therefore the delay of these applications can
+depend on the distance between host devices which host these
+modules. Hence, the delay time between the host devices that
+be suitable for application modules is calculated based on the
+Eq. 2:
+f ′
+∑
+i=1
+∆P P ′
+i
+= Tf ′ (2)
+The total time to run an application is equal to the sum of the
+time of receiving sensor request with the time of delivery to
+actuators after processing
+Tm + Tf ′ = Ta (3)
+A. LATENCY-A WARE MODULE PLACEMENT
+In this section, the LAMP algorithm is ﬁrst proposed in
+order to help to reduce the distance between hosts of modules.
+Algorithm 1 summarizes the process of LAMP algorithm. As
+can seen, the ﬁrst module of the program is placed on the end
+device of the network close to the end user. Then, select the
+next module, if it could not be placed on the current device,
+the delay of the devices (neighbour devices) that are connected
+847
+=== PAGE 4 ===
+to the current device is calculated by the Eq. 4. Neighbour
+devices are sorted in ascending based on delay, then the ﬁrst
+neighbor device is selected in order to the placement of the
+module. If the selected neighbor device has enough resources,
+the module placed in the device. If the device has not enough
+resources, the next neighbour device in the queue is selected
+for placement of the module. The algorithm continues until all
+modules of the application placed in fog.
+tm
+a = Qmp + ∆pp′ + Z (4)
+The limitations considered in the implementation include:
+Algorithm 1 Latency-Aware Module Placement
+Input:FogDevices,application modules;
+Output: mapping application modules on fog devices;
+modulesT oP lace application modules ;
+add InputM odule to placedM odules ;
+//InputModule place on EndDevice
+remove InputM odule f rom modulesT oP lace
+P reviousM odule InputM odule;
+CurrentM odule SecondM odule;
+CurrentDevice EndDevice ;
+for all module CurrentM odule2 modulesT oP lace do
+if RCurrentM odule > C CurrentDevice then
+dDelay is calculated by the Eq: 4;
+dDelay is arranged ascending ;
+for all device d2 dDelay do
+if RCurrentM odule < C CurrentDevice then
+SuitableDevices CurrentDevice ;
+break;
+end if
+end for
+if SuitableDevices == null then
+SuitableDevices CloudDevices ;
+end if
+add CurrentM odule to placedM odules ;
+//CurrentModule place on Suitabledevices
+CSuitableDevices = CSuitableDevices  
+RCurrentM odule
+P reviousM odule CurrentM odule
+CurrentDevice SuitableDevices ;
+Z = Z + ∆pp′
+remove CurrentM odule f rom modulesT oP lace
+else
+add CurrentM odule to placedM odules ;
+//CurrentModule place on Suitabledevices
+CSuitableDevices = CSuitableDevices  
+RCurrentM odule
+P reviousM odule CurrentM odule
+remove CurrentM odule f rom modulesT oP lace
+end if
+end for
+1) Each module of the application ” a” does not work on
+several devices.
+∑
+f 2F ′
+af m = 1;8m2 Ma (5)
+2) Each device can not accept ”a” module beyond its capac-
+TABLE III. LATENCY OF FOG -CLOUD DEVICES
+Source Destination Latency (ms)
+Sensor End device (e.g. mobile) 0.6
+Actuators End device 0.1
+End device Fog device 2
+Fog device Proxy-server 4
+Proxy-server Cloud 100
+TABLE IV . CONFIGURING FOG DEVICES
+Device type CPU, GHz RAM, GB uplink bw downlink bw
+Cloud 4.48 40 100 10000
+Proxy-server 0.28 4 10000 10000
+Fog device 0.28 4 10000 10000
+End device 1 1 10000 270
+ity: ∑
+m2Mf
+Rm Cf ;8f2 F (6)
+V. EVALUATION RESULTS AND ANALYSIS
+We employ iFogsim simulator to evaluation and investiga-
+tion of LAMP algorithm. The iFogsim was developed by Gupat
+et al . [ 2] based on cloudsim. IoT applications run on network
+topologies provided by iFogsim. A summary of the experimen-
+tal setup can be found in Tables III and IV. The simulation runs
+on topologies with 2, 3, and 4 fog devices. Each fog device
+supports 2, 4, 6 and 8 end devices. We assume each end device
+represents an application. The LAMP algorithm in terms of
+delay, cloud energy consumption, Fog energy consumption,
+cloud cost, and total network usage compares with four other
+algorithms include Cloud-Only Module Placement (COMP),
+Lower-Bound Module Placement (LBMP) which is introduced
+in [ 3], Simulated-Annealing Module Placement (SAMP) in
+[9] and Edge-Wards Module Placement (EWMP) algorithm.
+The simulation results show the performance of the proposed
+algorithm in comparison with all network topologies on the
+comparison criteria in, especially when the number of appli-
+cations increases. As can be seen in Fig 3, when is the number
+of applications in each fog devices is less than 4, the EWMP
+algorithm responses are in the good condition. But, when
+the number of these applications increases per fog device,
+its performance drops sharply. V ersus, LAMP algorithm better
+results at the highest number of applications and has a very
+favorable effect and can be seen that the delay has a signiﬁcant
+decrease.
+As can be seen in Fig 4, With placing module near-application
+devices, the algorithm has been able to reduce the average
+delay by up to 40 % for the COMP and up to 20 % for
+other algorithms. Of course, as you can see, the effect of
+the proposed algorithm is more evident when the number
+of devices in the network is limited and the number of
+applications increases.
+and it is clear that, according to Fig. 5, energy consumption in
+fog increases, but given the only 5% increase in fog computing
+(on average), the proposed algorithm is acceptable in this
+regard. Network usage means using the network resources,
+which increases the use of network resources as costs increase.
+Efﬁcient network technologies prefer to use minimum network
+848
+=== PAGE 5 ===
+Fig. 3. The average delay of the control loop
+Fig. 4. Cloud power consumption execution time in fog computing
+resources to reduce network trafﬁc and cost. As displayed in
+Figures 6, the cost of the network in cloud averaged up to 50%
+in the COMP and 30% in comparison with other algorithms.
+Furthermore, Figure 7, proposed a proper use of network
+resources in the fog and cloud by an average of 60% compared
+to the COMP and 35% compared to other algorithms. Also,
+the LAMP algorithm and LBMP , because they consider the
+proper use of resources, provide better response in these situ-
+ations. As mentioned above, in order to achieve the beneﬁts
+of fog computing, it’s best to process applications close to
+the devices where the data have been generated. Moreover,
+applications should be distributed between fog computing and
+cloud computing. since these devices have limited capacity, as
+shown in Fig. 8, the proposed algorithm and algorithm LBMP
+have been able to create a good balance between cloud and
+fog.
+Fig. 5. Fog power consumption execution time in fog computing
+Fig. 6. Comparison of costs of cloud in Fog execution
+Fig. 7. Network usage in Fog execution
+VI. CONCLUSIONS AND FUTURE WORKS
+Fog computing has been designed to reduce the challenges
+of cloud computing such as delays, energy consumption, and
+so on, which has the potential to support IoT applications.
+One of the main challenges of fog computing is to place
+the IoT application modules in the cloud-fog environment. In
+this paper, we presented the latency-aware algorithm using the
+position of the fog devices. We have introduced key features
+that affect response latency in IoT applications, while the
+expansion of applications in this environment was considered.
+The present paper focuses on static gesture. As a future work,
+we will examine the dynamic conditions of the placement so
+that we can ﬁnd methods for ﬁnding a high and low load
+device in the network and with the migration of modules at
+the network level and schedules of fog devices increase the
+network performance.
+Fig. 8. Placement application modules between cloud and fog
+849
+=== PAGE 6 ===
+REFERENCES
+[1] A. Botta, W. De Donato, V . Persico, and A. Pescap, ”
+Integration of cloud computing and internet of things: a
+survey”. Future Generation Computer Systems, pp.684-
+700. 2016
+[2] H.Gupta, A. V ahid Dastjerdi, S. K. Ghosh, & R. Buyya,
+”iFogSim: A toolkit for modeling and simulation of re-
+source management techniques in the Internet of Things,
+Edge and Fog computing environments”. Software: Prac-
+tice and Experience, 47(9), pp.1275-1296.2017.
+[3] M. Taneja, & A. Davy, ” Resource aware placement of IoT
+application modules in Fog-Cloud Computing Paradigm.”
+In Integrated Network and Service Management (IM),
+2017 IFIP/IEEE Symposium on.IEEE, pp. 1222-1228,
+2017.
+[4] OpenFog Consortium Architecture Working Group et al.
+2017. OpenFog Reference architecture for fog computing.
+OPFRA001 20817 (2017), 162.
+[5] R. Mahmud, R. Kotagiri, & R. Buyya. ”Fog computing:
+A taxonomy, survey and future directions”. In Internet of
+everything. Springer, Singapore. pp. 103-130, 2018.
+[6] Z. Hao, E. Novak, S. Yi, & Q. Li, ”Challenges and
+software architecture for fog computing.” IEEE Internet
+Computing, 21(2), pp. 44-53. 2017.
+[7] M. Rezaei, H. Noori, D. Rahbari, and M. Nickray. Re-
+FOCUS: A hybrid fog-cloud based intelligent trafﬁc re-
+routing system. In Knowledge-Based Engineering and
+Innovation (KBEI), IEEE 4th International Conference on.
+IEEE, pp. 0992-0998, December 2017.
+[8] Y . Fan, J. Chen, L. Wang, & Z. Cao, ”Energy-Efﬁcient and
+Latency-Aware Data Placement for Geo-Distributed Cloud
+Data Centers.” In International Conference on Communi-
+catins and Networking in China, Springer, Cham. pp. 465-
+474, September 2016.
+[9] Z. Rezazadeh, D. Rahbari, and M. Nickray. ”Optimized
+Module Placement in IoT Applications Based on Fog
+Computing”. In Electrical Engineering (ICEE), Iranian
+Conference on.IEEE. pp. 1553-1558, 2018.
+[10] M. Aazam, & E. N. Huh, ”Fog computing: The cloud-
+iotioe middleware paradigm.” IEEE Potentials, 35(3), pp.
+40-44. 2016.
+[11] E. Baccarelli, P . G. V . Naranjo, M. Scarpiniti, M. Shoja-
+far, & J. H. Abawajy, ”Fog of everything: Energy-efﬁcient
+networked computing architectures”, research challenges,
+and a case study. IEEE access, 5, pp. 9882-9910. 2017.
+[12] A. V . Dastjerdi, H. Gupta, R. N. Calheiros, S. K. Ghosh,
+& R. Buyya. ” Fog computing: Principles, architectures,
+and applications”, In Internet of Things, pp. 61-75. 2016.
+[13] K. Liang, L. Zhao, X. Chu, & H. H. Chen. ”An
+integrated architecture for software deﬁned and virtualized
+radio access networks with fog computing.”IEEE Network,
+31(1), pp. 80-87. 2017.
+[14] A. Alrawais, A. Alhothaily, C. Hu, & X. Cheng, ”Fog
+computing for the internet of things: Security and privacy
+issues”. IEEE Internet Computing, 21(2), pp. 34-42. 2017.
+[15] M. Chiang, & T. Zhang. ”Fog and IoT: An overview of
+research opportunities”. IEEE Internet of Things Journal,
+3(6), pp. 854-864. 2016.
+[16] A. Y ousefpour, G. Ishigaki, & J. P . Jue,” Fog computing:
+Towards minimizing delay in the internet of things”. In
+Edge Computing (EDGE), 2017 IEEE International Con-
+ference on, pp. 17-24. 2017
+[17] C. C. Byers, ”Architectural imperatives for fog comput-
+ing: Use cases, requirements, and architectural techniques
+for FOG-enabled IoT networks.” IEEE Communications
+Magazine, 55(8), pp. 14-20. 2017
+[18] R. Mayer, L. Graser, H. Gupta, E. Saurez, & U. Ra-
+machandran, ” EmuFog: extensible and scalable emulation
+of Large-Scale fog computing infrastructures.” In Fog
+World Congress (FWC), 2017 IEEE, pp. 1-6. 2017.
+[19] M. I. Naas, P . R. Parvedy, J. Boukhobza, & L. Lemarc-
+hand, iFogStor: an IoT data placement strategy for fog
+infrastructure. In Fog and Edge Computing (ICFEC), 2017
+IEEE 1st International Conference on pp. 97-104, 2017.
+[20] P . Kumar, N. Zaidi, & T. Choudhury, ”Fog computing:
+Common security issues and proposed countermeasures”.
+In System Modeling & Advancement in Research Trends
+(SMART), International Conference, pp. 311-315, IEEE.
+2016.
+[21] M. Mukherjee, R. Matam, L. Shu, L. Maglaras, M.
+A. Ferrag, N. Choudhury, & V . Kumar, (2017). ” Security
+and privacy in fog computing: Challenges.” IEEE Access,
+5, pp. 19293-19304. 2017.
+[22] S. Yi, Z. Qin, & Q. Li, ”Security and privacy issues of
+fog computing: A survey.” In International conference on
+wireless algorithms, systems, and applications. Springer,
+Cham. pp. 685-695, 2015.
+[23] W. Zhang, Z. Zhang, & H. C. Chao, ”Cooperative fog
+computing for dealing with big data in the internet of vehi-
+cles: Architecture and hierarchical resource management.”
+IEEE Communications Magazine, 55(12), pp. 60-67. 2017.
+[24] A. Khalid, & M. Shahbaz, ”Service Architecture Models
+For Fog Computing: A Remedy for Latency Issues in Data
+Access from Clouds.” KSII Transactions on Internet and
+Information Systems (TIIS), 11(5), pp. 2310-2345. 2017
+[25] O. Skarlat, S. Schulte, M. Borkowski, & P . Leitner,
+”Resource provisioning for IoT services in the fog”.
+In 2016 IEEE 9th international conference on service-
+oriented computing and applications (SOCA), pp. 32-39.
+IEEE. 2016.
+[26] S. Y angui, P . Ravindran, O. Bibani, R. H. Glitho, N.
+B. Hadj-Alouane, M. J. Morrow, & P . A. Polakos, ”A
+platform as-a-service for hybrid cloud/fog environments.”
+In Local and Metropolitan Area Networks (LANMAN),
+2016 IEEE International Symposium on, pp. 1-7.2016
+[27] H. J. Hong, P . H. Tsai, & C. H. Hsu, ”Dynamic module
+deployment in a fog computing platform.” In Network Op-
+erations and Management Symposium (APNOMS), 2016
+18th Asia-Paciﬁc pp. 1-6, 2016.
+[28] E. Kavvadia, S. Sagiadinos, K. Oikonomou, G. Tsiout-
+siouliklis, & S. Assa. ”Elastic virtual machine placement
+in cloud computing network environments”. Computer
+Networks, 93, pp. 435-447. 2015.
+850

@@ -1,0 +1,142 @@
+﻿================================================================================
+CONTROLLED DEMONSTRATION RUN: COMP (gw2_m4)
+Algorithm:          COMP
+Gateways:           2
+Mobiles Per GW:     4
+Total Applications: 8
+Expected Modules:   24 (3N)
+Start Time:         2026-11-23T16:18:34.4295342+05:30
+End Time:           2026-11-23T16:18:36.7690384+05:30
+Duration:           2.34s
+Exit Code:          0
+================================================================================
+--- STDOUT ---
+================================================================================
+ LAMP HEALTHCARE BSN SIMULATION RUNNER (PHASE 2 VALIDATED)
+ Algorithm: COMP
+ Topologies: 2 Gateways x 4 Mobiles/GW = 8 Applications
+ Simulation Duration: 2000 simulation ticks
+================================================================================
+Creating Sensor_Analyzer_0_0 on device cloud
+Creating Cloud_Storage_0_0 on device cloud
+Creating Interface_0_0 on device m-0-0
+Creating Sensor_Analyzer_0_1 on device cloud
+Creating Cloud_Storage_0_1 on device cloud
+Creating Interface_0_1 on device m-0-1
+Creating Interface_0_2 on device m-0-2
+Creating Sensor_Analyzer_0_2 on device cloud
+Creating Cloud_Storage_0_2 on device cloud
+Creating Sensor_Analyzer_0_3 on device cloud
+Creating Cloud_Storage_0_3 on device cloud
+Creating Interface_0_3 on device m-0-3
+Creating Sensor_Analyzer_1_0 on device cloud
+Creating Cloud_Storage_1_0 on device cloud
+Creating Interface_1_0 on device m-1-0
+Creating Interface_1_1 on device m-1-1
+Creating Sensor_Analyzer_1_1 on device cloud
+Creating Cloud_Storage_1_1 on device cloud
+Creating Sensor_Analyzer_1_2 on device cloud
+Creating Cloud_Storage_1_2 on device cloud
+Creating Interface_1_2 on device m-1-2
+Creating Sensor_Analyzer_1_3 on device cloud
+Creating Cloud_Storage_1_3 on device cloud
+Creating Interface_1_3 on device m-1-3
+
+[COMP Placement Distribution]
+  Fog Placements: 8
+  Cloud Placements: 16
+  Total Modules: 24 (Expected: 24)
+0.0 Submitted application app_0_0
+0.0 Submitted application app_0_2
+0.0 Submitted application app_1_1
+0.0 Submitted application app_0_1
+0.0 Submitted application app_1_0
+0.0 Submitted application app_1_3
+0.0 Submitted application app_0_3
+0.0 Submitted application app_1_2
+=========================================
+============== RESULTS ==================
+=========================================
+EXECUTION TIME : 1793
+=========================================
+APPLICATION LOOP DELAYS
+=========================================
+[ECG_0_0, Interface_0_0, Sensor_Analyzer_0_0, Interface_0_0, DISPLAY_0_0] ---> 407.6659999999449
+[ECG_0_1, Interface_0_1, Sensor_Analyzer_0_1, Interface_0_1, DISPLAY_0_1] ---> 408.4869074073904
+[ECG_0_2, Interface_0_2, Sensor_Analyzer_0_2, Interface_0_2, DISPLAY_0_2] ---> 408.87609259257505
+[ECG_0_3, Interface_0_3, Sensor_Analyzer_0_3, Interface_0_3, DISPLAY_0_3] ---> 409.0631851851748
+[ECG_1_0, Interface_1_0, Sensor_Analyzer_1_0, Interface_1_0, DISPLAY_1_0] ---> 408.92262222220086
+[ECG_1_1, Interface_1_1, Sensor_Analyzer_1_1, Interface_1_1, DISPLAY_1_1] ---> 409.0529074073937
+[ECG_1_2, Interface_1_2, Sensor_Analyzer_1_2, Interface_1_2, DISPLAY_1_2] ---> 409.07023703699343
+[ECG_1_3, Interface_1_3, Sensor_Analyzer_1_3, Interface_1_3, DISPLAY_1_3] ---> 409.7603074073684
+=========================================
+TUPLE CPU EXECUTION DELAY
+=========================================
+PATIENT_STATE_1_3 ---> 1.9090209096008774
+PATIENT_STATE_1_2 ---> 2.987573966436609
+PATIENT_STATE_0_3 ---> 1.315772907302529
+PATIENT_STATE_1_1 ---> 2.189640030240198
+PATIENT_STATE_0_2 ---> 2.7185809775810394
+PATIENT_STATE_1_0 ---> 0.9049715831196694
+PATIENT_STATE_0_1 ---> 2.307206113029558
+PATIENT_STATE_0_0 ---> 2.130207079897083
+STORE_PROCESS_COMPUTE_0_3 ---> 0.04715802249848546
+STORE_PROCESS_COMPUTE_1_2 ---> 0.03633860809003671
+STORE_PROCESS_COMPUTE_1_3 ---> 0.0472477969892076
+STORE_PROCESS_COMPUTE_0_1 ---> 0.09744339214439464
+STORE_PROCESS_COMPUTE_1_0 ---> 0.10244569758428121
+STORE_PROCESS_COMPUTE_0_2 ---> 0.09177936756385427
+STORE_PROCESS_COMPUTE_1_1 ---> 0.08837719318054675
+STORE_PROCESS_COMPUTE_0_0 ---> 0.09234092819991294
+ENHANCED_SENSOR_0_0 ---> 0.20659942187098454
+ENHANCED_SENSOR_0_1 ---> 0.4657739035411135
+ENHANCED_SENSOR_1_0 ---> 0.3733195999161466
+ENHANCED_SENSOR_0_2 ---> 0.4775162649050504
+ENHANCED_SENSOR_1_1 ---> 0.47065364504772994
+ECG_1_3 ---> 4.455705263092682
+ECG_0_3 ---> 4.006847028443202
+ECG_1_2 ---> 4.753905781371959
+ECG_0_2 ---> 3.1177360892020127
+ECG_1_1 ---> 4.552684126925556
+ECG_0_1 ---> 4.497727031391055
+ECG_1_0 ---> 4.368623960873435
+ECG_0_0 ---> 4.060265345663202
+ENHANCED_SENSOR_0_3 ---> 0.39236648153391435
+ENHANCED_SENSOR_1_2 ---> 0.14128625660051458
+ENHANCED_SENSOR_1_3 ---> 0.20886378254705396
+=========================================
+cloud : Energy Consumed = 2819168.8813316817
+proxy-server : Energy Consumed = 166866.59999999995
+d-0 : Energy Consumed = 166866.59999999995
+m-0-0 : Energy Consumed = 173838.15567998833
+m-0-1 : Energy Consumed = 174409.49799999956
+m-0-2 : Energy Consumed = 174409.49799999988
+m-0-3 : Energy Consumed = 174409.49799999973
+d-1 : Energy Consumed = 166866.59999999995
+m-1-0 : Energy Consumed = 174258.88998999447
+m-1-1 : Energy Consumed = 174217.11126999816
+m-1-2 : Energy Consumed = 173938.9325899843
+m-1-3 : Energy Consumed = 174256.39079999388
+Cost of execution in cloud = 219986.2621412574
+Total network usage = 432651.5
+
+================================================================================
+STRUCTURED RESULT METRICS (PHASE 2 VALIDATED)
+Algorithm: COMP
+Gateways: 2 | Mobiles/GW: 4 | Total Applications: 8
+Loop Delay (sim ticks): 408.8623
+Loops Completed: 8 / 8 (Total Executions: 2160)
+Cloud Energy (J): 2819168.8813
+Fog Energy (J): 1894337.7743
+Cloud Cost: 219986.262141
+Network Usage: 432651.5000
+Fog Placements: 8
+Cloud Placements: 16
+Status: SUCCESS
+================================================================================
+CSV_ROW:COMP,2,4,8,408.8623,2819168.8813,1894337.7743,219986.262141,432651.5000,8,16,SUCCESS
+
+--- STDERR ---
+
+================================================================================
+END OF DEMONSTRATION LOG

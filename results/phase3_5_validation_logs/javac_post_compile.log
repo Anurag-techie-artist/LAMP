@@ -1,0 +1,7 @@
+COMMAND: & "C:\Users\91630\Desktop\Code Playground\LAMP\eclipse-java-2025-03-R-win32-x86_64\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.6.v20250130-0529\jre\bin\javac.exe" -Xlint:all -cp "iFogSim-main\bin;iFogSim-main\jars\*;iFogSim-main\jars\commons-math3-3.5\*" -d "C:\Users\91630\Desktop\Code Playground\LAMP\iFogSim-main\bin" "C:\Users\91630\Desktop\Code Playground\LAMP\iFogSim-main\src\org\fog\lamp\baselines\ModulePlacementLBMP.java" "C:\Users\91630\Desktop\Code Playground\LAMP\iFogSim-main\src\org\fog\lamp\baselines\ModulePlacementLBMPTest.java" "C:\Users\91630\Desktop\Code Playground\LAMP\iFogSim-main\src\org\fog\lamp\baselines\BaselineSimulationRunner.java"
+START_TIME: 2026-11-22T19:24:09.200
+END_TIME: 2026-11-22T19:24:50.560
+EXIT_CODE: 0
+--- STDOUT ---
+
+--- STDERR ---

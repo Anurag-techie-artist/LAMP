@@ -1,0 +1,105 @@
+================================================================================
+ LAMP HEALTHCARE BSN SIMULATION RUNNER
+ Algorithm: EWMP
+ Topologies: 4 Gateways x 6 Mobiles/GW = 24 Applications
+ Simulation Duration: 2000 time units
+================================================================================
+Placement of operator Sensor_Analyzer on device d-0 successful.
+d-0 is shifting Sensor_Analyzer north.
+proxy-server is shifting Sensor_Analyzer north.
+Creating Interface on device m-2-2
+Creating Cloud_Storage on device cloud
+Creating Sensor_Analyzer on device cloud
+Creating Interface on device m-2-3
+Creating Interface on device m-0-0
+Creating Interface on device m-2-4
+Creating Interface on device m-0-1
+Creating Interface on device m-2-5
+Creating Interface on device m-0-2
+Creating Interface on device m-3-0
+Creating Interface on device m-0-3
+Creating Interface on device m-3-1
+Creating Interface on device m-0-4
+Creating Interface on device m-3-2
+Creating Interface on device m-0-5
+Creating Interface on device m-3-3
+Creating Interface on device m-1-0
+Creating Interface on device m-3-4
+Creating Interface on device m-1-1
+Creating Interface on device m-3-5
+Creating Interface on device m-1-2
+Creating Interface on device m-1-3
+Creating Interface on device m-1-4
+Creating Interface on device m-1-5
+Creating Interface on device m-2-0
+Creating Interface on device m-2-1
+
+[EWMP Placement Distribution]
+  Fog Placements: 24
+  Cloud Placements: 25
+  Sensor_Analyzer on Cloud? true
+
+0.0 Submitted application healthcare_bsn
+=========================================
+============== RESULTS ==================
+=========================================
+EXECUTION TIME : 2195
+=========================================
+APPLICATION LOOP DELAYS
+=========================================
+[ECG, Interface, Sensor_Analyzer, Interface, DISPLAY] ---> 929.122624999988
+=========================================
+TUPLE CPU EXECUTION DELAY
+=========================================
+PATIENT_STATE ---> 3.3662057255551483
+STORE_PROCESS_COMPUTE ---> 0.6703225614942787
+ECG ---> 3.996874989636729
+ENHANCED_SENSOR ---> 1.399368885136214
+=========================================
+cloud : Energy Consumed = 3247231.042856992
+proxy-server : Energy Consumed = 166866.59999999995
+d-0 : Energy Consumed = 166866.59999999995
+m-0-0 : Energy Consumed = 174363.759259999
+m-0-1 : Energy Consumed = 174321.0032599989
+m-0-2 : Energy Consumed = 174137.905779999
+m-0-3 : Energy Consumed = 174305.733259999
+m-0-4 : Energy Consumed = 174122.63577999908
+m-0-5 : Energy Consumed = 174290.4632599989
+d-1 : Energy Consumed = 166866.59999999995
+m-1-0 : Energy Consumed = 174409.49799999906
+m-1-1 : Energy Consumed = 174394.22799999893
+m-1-2 : Energy Consumed = 174214.18451999893
+m-1-3 : Energy Consumed = 174378.95799999902
+m-1-4 : Energy Consumed = 174198.91451999903
+m-1-5 : Energy Consumed = 174363.68799999898
+d-2 : Energy Consumed = 166866.59999999995
+m-2-0 : Energy Consumed = 174409.49799999894
+m-2-1 : Energy Consumed = 174394.2279999991
+m-2-2 : Energy Consumed = 174305.73325999902
+m-2-3 : Energy Consumed = 174378.95799999902
+m-2-4 : Energy Consumed = 174198.91451999894
+m-2-5 : Energy Consumed = 174363.68799999898
+d-3 : Energy Consumed = 166866.59999999995
+m-3-0 : Energy Consumed = 174321.00325999898
+m-3-1 : Energy Consumed = 174394.22799999898
+m-3-2 : Energy Consumed = 174305.733259999
+m-3-3 : Energy Consumed = 174378.95799999897
+m-3-4 : Energy Consumed = 174290.46325999894
+m-3-5 : Energy Consumed = 174363.68799999918
+Cost of execution in cloud = 826859.1999999899
+Total network usage = 1229502.0
+
+================================================================================
+STRUCTURED RESULT METRICS
+Algorithm: EWMP
+Gateways: 4 | Mobiles/GW: 6 | Total Applications: 24
+Loop Delay (ms): 929.122624999988
+Cloud Energy (J): 3247231.042856992
+Fog Energy (J): 5017939.065199977
+Cloud Cost: 826859.1999999899
+Network Usage: 1229502.0
+Fog Placements: 24
+Cloud Placements: 25
+================================================================================
+CSV_ROW:EWMP,4,6,24,929.122624999988,3247231.042856992,5017939.065199977,826859.1999999899,1229502.0,24,25,SUCCESS
+

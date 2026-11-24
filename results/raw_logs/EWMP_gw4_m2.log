@@ -1,0 +1,77 @@
+================================================================================
+ LAMP HEALTHCARE BSN SIMULATION RUNNER
+ Algorithm: EWMP
+ Topologies: 4 Gateways x 2 Mobiles/GW = 8 Applications
+ Simulation Duration: 2000 time units
+================================================================================
+Placement of operator Sensor_Analyzer on device d-0 successful.
+Placement of operator Sensor_Analyzer on device d-1 successful.
+Placement of operator Sensor_Analyzer on device d-2 successful.
+Placement of operator Sensor_Analyzer on device d-3 successful.
+Creating Sensor_Analyzer on device d-3
+Creating Interface on device m-3-0
+Creating Cloud_Storage on device cloud
+Creating Sensor_Analyzer on device d-0
+Creating Interface on device m-3-1
+Creating Interface on device m-0-0
+Creating Interface on device m-0-1
+Creating Sensor_Analyzer on device d-1
+Creating Interface on device m-1-0
+Creating Interface on device m-1-1
+Creating Sensor_Analyzer on device d-2
+Creating Interface on device m-2-0
+Creating Interface on device m-2-1
+
+[EWMP Placement Distribution]
+  Fog Placements: 16
+  Cloud Placements: 1
+  Sensor_Analyzer on Cloud? false
+
+0.0 Submitted application healthcare_bsn
+=========================================
+============== RESULTS ==================
+=========================================
+EXECUTION TIME : 858
+=========================================
+APPLICATION LOOP DELAYS
+=========================================
+[ECG, Interface, Sensor_Analyzer, Interface, DISPLAY] ---> 15.70999999999928
+=========================================
+TUPLE CPU EXECUTION DELAY
+=========================================
+PATIENT_STATE ---> 0.7236323529446399
+STORE_PROCESS_COMPUTE ---> 0.022321428571331126
+ECG ---> 3.478741311951747
+ENHANCED_SENSOR ---> 4.133045247437569
+=========================================
+cloud : Energy Consumed = 2687035.130357023
+proxy-server : Energy Consumed = 166866.59999999995
+d-0 : Energy Consumed = 214270.51026800217
+m-0-0 : Energy Consumed = 175029.45999999862
+m-0-1 : Energy Consumed = 175029.46000000037
+d-1 : Energy Consumed = 214270.51026800217
+m-1-0 : Energy Consumed = 175029.45999999862
+m-1-1 : Energy Consumed = 175029.46000000037
+d-2 : Energy Consumed = 214270.51026800217
+m-2-0 : Energy Consumed = 175029.45999999862
+m-2-1 : Energy Consumed = 175029.46000000037
+d-3 : Energy Consumed = 214270.51026800217
+m-3-0 : Energy Consumed = 175029.45999999862
+m-3-1 : Energy Consumed = 175029.46000000037
+Cost of execution in cloud = 32657.39999994012
+Total network usage = 358960.0
+
+================================================================================
+STRUCTURED RESULT METRICS
+Algorithm: EWMP
+Gateways: 4 | Mobiles/GW: 2 | Total Applications: 8
+Loop Delay (ms): 15.70999999999928
+Cloud Energy (J): 2687035.130357023
+Fog Energy (J): 2424184.3210720047
+Cloud Cost: 32657.39999994012
+Network Usage: 358960.0
+Fog Placements: 16
+Cloud Placements: 1
+================================================================================
+CSV_ROW:EWMP,4,2,8,15.70999999999928,2687035.130357023,2424184.3210720047,32657.39999994012,358960.0,16,1,SUCCESS
+

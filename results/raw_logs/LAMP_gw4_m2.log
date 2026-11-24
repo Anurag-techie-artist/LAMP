@@ -1,0 +1,94 @@
+================================================================================
+ LAMP HEALTHCARE BSN SIMULATION RUNNER
+ Algorithm: LAMP
+ Topologies: 4 Gateways x 2 Mobiles/GW = 8 Applications
+ Simulation Duration: 2000 time units
+================================================================================
+Creating Cloud_Storage on device cloud
+Creating Interface on device m-0-0
+Creating Sensor_Analyzer on device d-0
+Creating Interface on device m-0-1
+Creating Sensor_Analyzer on device d-0
+Creating Interface on device m-1-0
+Creating Sensor_Analyzer on device d-1
+Creating Interface on device m-1-1
+Creating Sensor_Analyzer on device d-1
+Creating Interface on device m-2-0
+Creating Sensor_Analyzer on device d-2
+Creating Interface on device m-2-1
+Creating Sensor_Analyzer on device d-2
+Creating Interface on device m-3-0
+Creating Sensor_Analyzer on device d-3
+Creating Interface on device m-3-1
+Creating Sensor_Analyzer on device d-3
+
+[LAMP Placement Distribution]
+  Fog Placements: 16
+  Cloud Placements: 1
+  Module Mapping Details:
+    Interface@m-3-1 -> m-3-1
+    Sensor_Analyzer@m-0-0 -> d-0
+    Sensor_Analyzer@m-0-1 -> d-0
+    Sensor_Analyzer@m-1-0 -> d-1
+    Cloud_Storage@Global -> cloud
+    Interface@m-0-0 -> m-0-0
+    Sensor_Analyzer@m-1-1 -> d-1
+    Sensor_Analyzer@m-2-0 -> d-2
+    Interface@m-0-1 -> m-0-1
+    Interface@m-1-0 -> m-1-0
+    Sensor_Analyzer@m-2-1 -> d-2
+    Sensor_Analyzer@m-3-0 -> d-3
+    Interface@m-1-1 -> m-1-1
+    Interface@m-2-0 -> m-2-0
+    Sensor_Analyzer@m-3-1 -> d-3
+    Interface@m-2-1 -> m-2-1
+    Interface@m-3-0 -> m-3-0
+
+0.0 Submitted application healthcare_bsn
+=========================================
+============== RESULTS ==================
+=========================================
+EXECUTION TIME : 958
+=========================================
+APPLICATION LOOP DELAYS
+=========================================
+[ECG, Interface, Sensor_Analyzer, Interface, DISPLAY] ---> 85.16362966105724
+=========================================
+TUPLE CPU EXECUTION DELAY
+=========================================
+PATIENT_STATE ---> 2.07330663241947
+STORE_PROCESS_COMPUTE ---> 0.022321428571331126
+ECG ---> 4.250278265866928
+ENHANCED_SENSOR ---> 119.19419650223435
+=========================================
+cloud : Energy Consumed = 2685793.7017855756
+proxy-server : Energy Consumed = 166866.59999999995
+d-0 : Energy Consumed = 214678.0000000018
+m-0-0 : Energy Consumed = 175029.4599999996
+m-0-1 : Energy Consumed = 175029.45999999982
+d-1 : Energy Consumed = 214678.00000000204
+m-1-0 : Energy Consumed = 175029.45999999973
+m-1-1 : Energy Consumed = 175029.4599999998
+d-2 : Energy Consumed = 214678.00000000178
+m-2-0 : Energy Consumed = 174999.02343607083
+m-2-1 : Energy Consumed = 174983.83651214233
+d-3 : Energy Consumed = 214678.00000000157
+m-3-0 : Energy Consumed = 175029.4599999994
+m-3-1 : Energy Consumed = 174999.0946960712
+Cost of execution in cloud = 30897.399999942405
+Total network usage = 337642.0
+
+================================================================================
+STRUCTURED RESULT METRICS
+Algorithm: LAMP
+Gateways: 4 | Mobiles/GW: 2 | Total Applications: 8
+Loop Delay (ms): 85.16362966105724
+Cloud Energy (J): 2685793.7017855756
+Fog Energy (J): 2425707.8546442897
+Cloud Cost: 30897.399999942405
+Network Usage: 337642.0
+Fog Placements: 16
+Cloud Placements: 1
+================================================================================
+CSV_ROW:LAMP,4,2,8,85.16362966105724,2685793.7017855756,2425707.8546442897,30897.399999942405,337642.0,16,1,SUCCESS
+

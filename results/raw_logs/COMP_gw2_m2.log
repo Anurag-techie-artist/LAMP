@@ -1,0 +1,54 @@
+================================================================================
+ LAMP HEALTHCARE BSN SIMULATION RUNNER
+ Algorithm: COMP
+ Topologies: 2 Gateways x 2 Mobiles/GW = 4 Applications
+ Simulation Duration: 2000 time units
+================================================================================
+Creating Cloud_Storage on device cloud
+Creating Sensor_Analyzer on device cloud
+Creating Interface on device m-1-1
+Creating Interface on device m-0-1
+Creating Interface on device m-1-0
+Creating Interface on device m-0-0
+0.0 Submitted application healthcare_bsn
+=========================================
+============== RESULTS ==================
+=========================================
+EXECUTION TIME : 675
+=========================================
+APPLICATION LOOP DELAYS
+=========================================
+[ECG, Interface, Sensor_Analyzer, Interface, DISPLAY] ---> 220.40199864130452
+=========================================
+TUPLE CPU EXECUTION DELAY
+=========================================
+PATIENT_STATE ---> 1.514060479588185
+STORE_PROCESS_COMPUTE ---> 0.022328268521801937
+ECG ---> 2.7746051171224475
+ENHANCED_SENSOR ---> 0.07824180356849078
+=========================================
+cloud : Energy Consumed = 3063780.797857098
+proxy-server : Energy Consumed = 166866.59999999995
+d-0 : Energy Consumed = 166866.59999999995
+m-0-0 : Energy Consumed = 174394.2992599995
+m-0-1 : Energy Consumed = 173847.5530925001
+d-1 : Energy Consumed = 166866.59999999995
+m-1-0 : Energy Consumed = 174394.2992599991
+m-1-1 : Energy Consumed = 174394.29925999924
+Cost of execution in cloud = 566777.8399999645
+Total network usage = 210419.0
+
+================================================================================
+STRUCTURED RESULT METRICS
+Algorithm: COMP
+Gateways: 2 | Mobiles/GW: 2 | Total Applications: 4
+Loop Delay (ms): 220.40199864130452
+Cloud Energy (J): 3063780.797857098
+Fog Energy (J): 1197630.2508724977
+Cloud Cost: 566777.8399999645
+Network Usage: 210419.0
+Fog Placements: 4
+Cloud Placements: 5
+================================================================================
+CSV_ROW:COMP,2,2,4,220.40199864130452,3063780.797857098,1197630.2508724977,566777.8399999645,210419.0,4,5,SUCCESS
+

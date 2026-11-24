@@ -1,0 +1,440 @@
+================================================================================
+ LAMP HEALTHCARE BSN SIMULATION RUNNER (PHASE 2 VALIDATED)
+ Algorithm: LAMP
+ Topologies: 4 Gateways x 8 Mobiles/GW = 32 Applications
+ Simulation Duration: 2000 simulation ticks
+================================================================================
+Creating Cloud_Storage_0_0 on device cloud
+Creating Interface_0_0 on device m-0-0
+Creating Sensor_Analyzer_0_0 on device d-0
+Creating Cloud_Storage_0_1 on device cloud
+Creating Interface_0_1 on device m-0-1
+Creating Sensor_Analyzer_0_1 on device d-0
+Creating Interface_0_2 on device m-0-2
+Creating Cloud_Storage_0_2 on device cloud
+Creating Sensor_Analyzer_0_2 on device d-0
+Creating Cloud_Storage_0_3 on device cloud
+Creating Interface_0_3 on device m-0-3
+Creating Sensor_Analyzer_0_3 on device d-0
+Creating Cloud_Storage_0_4 on device cloud
+Creating Interface_0_4 on device m-0-4
+Creating Sensor_Analyzer_0_4 on device proxy-server
+Creating Cloud_Storage_0_5 on device cloud
+Creating Sensor_Analyzer_0_5 on device proxy-server
+Creating Interface_0_5 on device m-0-5
+Creating Cloud_Storage_0_6 on device cloud
+Creating Sensor_Analyzer_0_6 on device proxy-server
+Creating Interface_0_6 on device m-0-6
+Creating Cloud_Storage_0_7 on device cloud
+Creating Sensor_Analyzer_0_7 on device proxy-server
+Creating Interface_0_7 on device m-0-7
+Creating Cloud_Storage_1_0 on device cloud
+Creating Interface_1_0 on device m-1-0
+Creating Sensor_Analyzer_1_0 on device d-1
+Creating Interface_1_1 on device m-1-1
+Creating Cloud_Storage_1_1 on device cloud
+Creating Sensor_Analyzer_1_1 on device d-1
+Creating Cloud_Storage_1_2 on device cloud
+Creating Interface_1_2 on device m-1-2
+Creating Sensor_Analyzer_1_2 on device d-1
+Creating Cloud_Storage_1_3 on device cloud
+Creating Interface_1_3 on device m-1-3
+Creating Sensor_Analyzer_1_3 on device d-1
+Creating Cloud_Storage_1_4 on device cloud
+Creating Sensor_Analyzer_1_4 on device d-2
+Creating Interface_1_4 on device m-1-4
+Creating Cloud_Storage_1_5 on device cloud
+Creating Sensor_Analyzer_1_5 on device d-2
+Creating Interface_1_5 on device m-1-5
+Creating Cloud_Storage_1_6 on device cloud
+Creating Sensor_Analyzer_1_6 on device d-2
+Creating Interface_1_6 on device m-1-6
+Creating Cloud_Storage_1_7 on device cloud
+Creating Sensor_Analyzer_1_7 on device d-2
+Creating Interface_1_7 on device m-1-7
+Creating Interface_2_0 on device m-2-0
+Creating Cloud_Storage_2_0 on device cloud
+Creating Sensor_Analyzer_2_0 on device d-3
+Creating Cloud_Storage_2_1 on device cloud
+Creating Interface_2_1 on device m-2-1
+Creating Sensor_Analyzer_2_1 on device d-3
+Creating Cloud_Storage_2_2 on device cloud
+Creating Interface_2_2 on device m-2-2
+Creating Sensor_Analyzer_2_2 on device d-3
+Creating Cloud_Storage_2_3 on device cloud
+Creating Sensor_Analyzer_2_3 on device d-3
+Creating Interface_2_3 on device m-2-3
+Creating Sensor_Analyzer_2_4 on device cloud
+Creating Cloud_Storage_2_4 on device cloud
+Creating Interface_2_4 on device m-2-4
+Creating Sensor_Analyzer_2_5 on device cloud
+Creating Cloud_Storage_2_5 on device cloud
+Creating Interface_2_5 on device m-2-5
+Creating Sensor_Analyzer_2_6 on device cloud
+Creating Cloud_Storage_2_6 on device cloud
+Creating Interface_2_6 on device m-2-6
+Creating Sensor_Analyzer_2_7 on device cloud
+Creating Cloud_Storage_2_7 on device cloud
+Creating Interface_2_7 on device m-2-7
+Creating Sensor_Analyzer_3_0 on device cloud
+Creating Cloud_Storage_3_0 on device cloud
+Creating Interface_3_0 on device m-3-0
+Creating Sensor_Analyzer_3_1 on device cloud
+Creating Cloud_Storage_3_1 on device cloud
+Creating Interface_3_1 on device m-3-1
+Creating Sensor_Analyzer_3_2 on device cloud
+Creating Cloud_Storage_3_2 on device cloud
+Creating Interface_3_2 on device m-3-2
+Creating Sensor_Analyzer_3_3 on device cloud
+Creating Cloud_Storage_3_3 on device cloud
+Creating Interface_3_3 on device m-3-3
+Creating Sensor_Analyzer_3_4 on device cloud
+Creating Cloud_Storage_3_4 on device cloud
+Creating Interface_3_4 on device m-3-4
+Creating Sensor_Analyzer_3_5 on device cloud
+Creating Cloud_Storage_3_5 on device cloud
+Creating Interface_3_5 on device m-3-5
+Creating Sensor_Analyzer_3_6 on device cloud
+Creating Cloud_Storage_3_6 on device cloud
+Creating Interface_3_6 on device m-3-6
+Creating Sensor_Analyzer_3_7 on device cloud
+Creating Cloud_Storage_3_7 on device cloud
+Creating Interface_3_7 on device m-3-7
+
+[LAMP Placement Distribution]
+  Fog Placements: 52
+  Cloud Placements: 44
+  Total Modules: 96 (Expected: 96)
+  Module Mapping Details:
+    Interface_1_1 -> m-1-1
+    Interface_1_0 -> m-1-0
+    Interface_1_3 -> m-1-3
+    Interface_3_1 -> m-3-1
+    Interface_1_2 -> m-1-2
+    Interface_3_0 -> m-3-0
+    Interface_2_7 -> m-2-7
+    Cloud_Storage_3_0 -> cloud
+    Cloud_Storage_3_1 -> cloud
+    Interface_0_6 -> m-0-6
+    Cloud_Storage_1_3 -> cloud
+    Interface_2_4 -> m-2-4
+    Interface_0_5 -> m-0-5
+    Cloud_Storage_1_2 -> cloud
+    Interface_2_3 -> m-2-3
+    Cloud_Storage_1_1 -> cloud
+    Interface_2_6 -> m-2-6
+    Interface_0_7 -> m-0-7
+    Cloud_Storage_1_0 -> cloud
+    Interface_2_5 -> m-2-5
+    Sensor_Analyzer_1_5 -> d-2
+    Cloud_Storage_1_7 -> cloud
+    Sensor_Analyzer_3_3 -> cloud
+    Cloud_Storage_3_6 -> cloud
+    Sensor_Analyzer_1_4 -> d-2
+    Cloud_Storage_1_6 -> cloud
+    Sensor_Analyzer_3_2 -> cloud
+    Cloud_Storage_3_7 -> cloud
+    Sensor_Analyzer_1_3 -> d-1
+    Cloud_Storage_1_5 -> cloud
+    Sensor_Analyzer_3_1 -> cloud
+    Sensor_Analyzer_1_2 -> d-1
+    Cloud_Storage_1_4 -> cloud
+    Sensor_Analyzer_3_0 -> cloud
+    Cloud_Storage_3_2 -> cloud
+    Sensor_Analyzer_3_7 -> cloud
+    Cloud_Storage_3_3 -> cloud
+    Sensor_Analyzer_3_6 -> cloud
+    Sensor_Analyzer_1_7 -> d-2
+    Cloud_Storage_3_4 -> cloud
+    Sensor_Analyzer_3_5 -> cloud
+    Sensor_Analyzer_1_6 -> d-2
+    Sensor_Analyzer_3_4 -> cloud
+    Cloud_Storage_3_5 -> cloud
+    Sensor_Analyzer_1_1 -> d-1
+    Sensor_Analyzer_1_0 -> d-1
+    Interface_0_2 -> m-0-2
+    Interface_2_0 -> m-2-0
+    Interface_0_1 -> m-0-1
+    Interface_0_4 -> m-0-4
+    Interface_2_2 -> m-2-2
+    Interface_0_3 -> m-0-3
+    Interface_2_1 -> m-2-1
+    Interface_0_0 -> m-0-0
+    Cloud_Storage_0_0 -> cloud
+    Interface_3_7 -> m-3-7
+    Cloud_Storage_2_0 -> cloud
+    Interface_3_6 -> m-3-6
+    Cloud_Storage_2_1 -> cloud
+    Cloud_Storage_2_2 -> cloud
+    Cloud_Storage_0_4 -> cloud
+    Interface_1_5 -> m-1-5
+    Interface_3_3 -> m-3-3
+    Cloud_Storage_0_3 -> cloud
+    Interface_1_4 -> m-1-4
+    Interface_3_2 -> m-3-2
+    Cloud_Storage_0_2 -> cloud
+    Interface_1_7 -> m-1-7
+    Interface_3_5 -> m-3-5
+    Cloud_Storage_0_1 -> cloud
+    Interface_1_6 -> m-1-6
+    Interface_3_4 -> m-3-4
+    Sensor_Analyzer_0_6 -> proxy-server
+    Sensor_Analyzer_2_4 -> cloud
+    Cloud_Storage_2_7 -> cloud
+    Sensor_Analyzer_0_5 -> proxy-server
+    Cloud_Storage_0_7 -> cloud
+    Sensor_Analyzer_2_3 -> d-3
+    Sensor_Analyzer_0_4 -> proxy-server
+    Cloud_Storage_0_6 -> cloud
+    Sensor_Analyzer_2_2 -> d-3
+    Sensor_Analyzer_0_3 -> d-0
+    Cloud_Storage_0_5 -> cloud
+    Sensor_Analyzer_2_1 -> d-3
+    Cloud_Storage_2_3 -> cloud
+    Cloud_Storage_2_4 -> cloud
+    Sensor_Analyzer_2_7 -> cloud
+    Cloud_Storage_2_5 -> cloud
+    Sensor_Analyzer_2_6 -> cloud
+    Sensor_Analyzer_0_7 -> proxy-server
+    Sensor_Analyzer_2_5 -> cloud
+    Cloud_Storage_2_6 -> cloud
+    Sensor_Analyzer_0_2 -> d-0
+    Sensor_Analyzer_2_0 -> d-3
+    Sensor_Analyzer_0_1 -> d-0
+    Sensor_Analyzer_0_0 -> d-0
+0.0 Submitted application app_0_0
+0.0 Submitted application app_0_2
+0.0 Submitted application app_1_1
+0.0 Submitted application app_2_0
+0.0 Submitted application app_0_1
+0.0 Submitted application app_1_0
+0.0 Submitted application app_0_4
+0.0 Submitted application app_1_3
+0.0 Submitted application app_2_2
+0.0 Submitted application app_3_1
+0.0 Submitted application app_0_3
+0.0 Submitted application app_1_2
+0.0 Submitted application app_2_1
+0.0 Submitted application app_3_0
+0.0 Submitted application app_0_6
+0.0 Submitted application app_1_5
+0.0 Submitted application app_2_4
+0.0 Submitted application app_3_3
+0.0 Submitted application app_0_5
+0.0 Submitted application app_1_4
+0.0 Submitted application app_2_3
+0.0 Submitted application app_3_2
+0.0 Submitted application app_1_7
+0.0 Submitted application app_2_6
+0.0 Submitted application app_3_5
+0.0 Submitted application app_0_7
+0.0 Submitted application app_1_6
+0.0 Submitted application app_2_5
+0.0 Submitted application app_3_4
+0.0 Submitted application app_3_7
+0.0 Submitted application app_2_7
+0.0 Submitted application app_3_6
+=========================================
+============== RESULTS ==================
+=========================================
+EXECUTION TIME : 12350
+=========================================
+APPLICATION LOOP DELAYS
+=========================================
+[ECG_0_0, Interface_0_0, Sensor_Analyzer_0_0, Interface_0_0, DISPLAY_0_0] ---> 482.5796202531587
+[ECG_0_1, Interface_0_1, Sensor_Analyzer_0_1, Interface_0_1, DISPLAY_0_1] ---> 480.6471069182389
+[ECG_0_2, Interface_0_2, Sensor_Analyzer_0_2, Interface_0_2, DISPLAY_0_2] ---> 482.93072955973764
+[ECG_0_3, Interface_0_3, Sensor_Analyzer_0_3, Interface_0_3, DISPLAY_0_3] ---> 477.6854749999954
+[ECG_0_4, Interface_0_4, Sensor_Analyzer_0_4, Interface_0_4, DISPLAY_0_4] ---> 469.0580789473685
+[ECG_0_5, Interface_0_5, Sensor_Analyzer_0_5, Interface_0_5, DISPLAY_0_5] ---> 456.24432432432354
+[ECG_0_6, Interface_0_6, Sensor_Analyzer_0_6, Interface_0_6, DISPLAY_0_6] ---> 463.8867567567571
+[ECG_0_7, Interface_0_7, Sensor_Analyzer_0_7, Interface_0_7, DISPLAY_0_7] ---> 475.78474666666665
+[ECG_1_0, Interface_1_0, Sensor_Analyzer_1_0, Interface_1_0, DISPLAY_1_0] ---> 479.96207547168495
+[ECG_1_1, Interface_1_1, Sensor_Analyzer_1_1, Interface_1_1, DISPLAY_1_1] ---> 485.939625
+[ECG_1_2, Interface_1_2, Sensor_Analyzer_1_2, Interface_1_2, DISPLAY_1_2] ---> 480.18722499998796
+[ECG_1_3, Interface_1_3, Sensor_Analyzer_1_3, Interface_1_3, DISPLAY_1_3] ---> 474.5511698113204
+[ECG_1_4, Interface_1_4, Sensor_Analyzer_1_4, Interface_1_4, DISPLAY_1_4] ---> null
+[ECG_1_5, Interface_1_5, Sensor_Analyzer_1_5, Interface_1_5, DISPLAY_1_5] ---> null
+[ECG_1_6, Interface_1_6, Sensor_Analyzer_1_6, Interface_1_6, DISPLAY_1_6] ---> null
+[ECG_1_7, Interface_1_7, Sensor_Analyzer_1_7, Interface_1_7, DISPLAY_1_7] ---> null
+[ECG_2_0, Interface_2_0, Sensor_Analyzer_2_0, Interface_2_0, DISPLAY_2_0] ---> null
+[ECG_2_1, Interface_2_1, Sensor_Analyzer_2_1, Interface_2_1, DISPLAY_2_1] ---> null
+[ECG_2_2, Interface_2_2, Sensor_Analyzer_2_2, Interface_2_2, DISPLAY_2_2] ---> null
+[ECG_2_3, Interface_2_3, Sensor_Analyzer_2_3, Interface_2_3, DISPLAY_2_3] ---> null
+[ECG_2_4, Interface_2_4, Sensor_Analyzer_2_4, Interface_2_4, DISPLAY_2_4] ---> 937.7948070175432
+[ECG_2_5, Interface_2_5, Sensor_Analyzer_2_5, Interface_2_5, DISPLAY_2_5] ---> 939.4527368421058
+[ECG_2_6, Interface_2_6, Sensor_Analyzer_2_6, Interface_2_6, DISPLAY_2_6] ---> 931.6921428571422
+[ECG_2_7, Interface_2_7, Sensor_Analyzer_2_7, Interface_2_7, DISPLAY_2_7] ---> 934.6385714285707
+[ECG_3_0, Interface_3_0, Sensor_Analyzer_3_0, Interface_3_0, DISPLAY_3_0] ---> 917.4879999999996
+[ECG_3_1, Interface_3_1, Sensor_Analyzer_3_1, Interface_3_1, DISPLAY_3_1] ---> 923.1207142857139
+[ECG_3_2, Interface_3_2, Sensor_Analyzer_3_2, Interface_3_2, DISPLAY_3_2] ---> 924.9957142857139
+[ECG_3_3, Interface_3_3, Sensor_Analyzer_3_3, Interface_3_3, DISPLAY_3_3] ---> 935.294245614035
+[ECG_3_4, Interface_3_4, Sensor_Analyzer_3_4, Interface_3_4, DISPLAY_3_4] ---> 938.7705614035087
+[ECG_3_5, Interface_3_5, Sensor_Analyzer_3_5, Interface_3_5, DISPLAY_3_5] ---> 941.7989122807014
+[ECG_3_6, Interface_3_6, Sensor_Analyzer_3_6, Interface_3_6, DISPLAY_3_6] ---> 933.0239999999995
+[ECG_3_7, Interface_3_7, Sensor_Analyzer_3_7, Interface_3_7, DISPLAY_3_7] ---> 938.0314285714281
+=========================================
+TUPLE CPU EXECUTION DELAY
+=========================================
+STORE_PROCESS_COMPUTE_2_7 ---> 0.1562514442605783
+STORE_PROCESS_COMPUTE_2_5 ---> 0.12034546744812677
+STORE_PROCESS_COMPUTE_2_6 ---> 0.13772117934729253
+STORE_PROCESS_COMPUTE_2_4 ---> 0.089751587198136
+PATIENT_STATE_1_3 ---> 2.3747214847329516
+PATIENT_STATE_1_2 ---> 1.6133272411488757
+PATIENT_STATE_1_1 ---> 2.1733295735845077
+PATIENT_STATE_1_0 ---> 2.6807397247673084
+ECG_3_7 ---> 4.999994555462161
+ECG_3_6 ---> 4.999937707059885
+ECG_3_5 ---> 4.155689877389266
+ECG_3_4 ---> 4.999998136594657
+ECG_3_3 ---> 4.604648437050749
+ECG_3_2 ---> 4.9207086001557645
+PATIENT_STATE_2_7 ---> 2.90135853155689
+PATIENT_STATE_2_6 ---> 2.585086295131816
+PATIENT_STATE_2_5 ---> 3.0242045845867396
+ENHANCED_SENSOR_0_0 ---> 105.0173816176159
+ENHANCED_SENSOR_0_1 ---> 104.95532408564993
+ENHANCED_SENSOR_0_2 ---> 105.1947383952875
+ECG_3_1 ---> 4.940908384251992
+ENHANCED_SENSOR_0_7 ---> 94.85288648561152
+ECG_3_0 ---> 4.997968205720558
+ENHANCED_SENSOR_0_3 ---> 104.27336680141293
+ENHANCED_SENSOR_0_4 ---> 95.00212170780647
+ENHANCED_SENSOR_0_5 ---> 94.97572517557957
+ENHANCED_SENSOR_0_6 ---> 99.94893563298493
+STORE_PROCESS_COMPUTE_3_6 ---> 0.06504833306341976
+STORE_PROCESS_COMPUTE_3_7 ---> 0.05108808954131962
+STORE_PROCESS_COMPUTE_3_4 ---> 0.15085317193102785
+STORE_PROCESS_COMPUTE_3_5 ---> 0.14991073038286545
+STORE_PROCESS_COMPUTE_3_2 ---> 0.12440727894783395
+STORE_PROCESS_COMPUTE_3_3 ---> 0.16949631637175616
+PATIENT_STATE_2_4 ---> 3.0078112862121382
+STORE_PROCESS_COMPUTE_3_0 ---> 0.031398706900838194
+STORE_PROCESS_COMPUTE_3_1 ---> 0.2343868045589927
+ECG_0_7 ---> 4.999999996405094
+ECG_0_6 ---> 4.90231444777864
+ECG_0_5 ---> 4.795648811418565
+PATIENT_STATE_3_7 ---> 3.5884121587862627
+PATIENT_STATE_3_6 ---> 3.7376802642397635
+PATIENT_STATE_3_5 ---> 1.4807906408471598
+PATIENT_STATE_3_4 ---> 3.9723785069979582
+ENHANCED_SENSOR_1_0 ---> 104.91513463606186
+ENHANCED_SENSOR_1_1 ---> 100.22064792032539
+ECG_0_4 ---> 4.999998319148886
+ECG_0_3 ---> 4.303292708671588
+ECG_0_2 ---> 4.953838954967681
+ECG_0_1 ---> 3.8652371155204284
+ECG_0_0 ---> 4.557118869475488
+ENHANCED_SENSOR_1_2 ---> 100.08917619447513
+ENHANCED_SENSOR_1_3 ---> 103.6698453971746
+STORE_PROCESS_COMPUTE_0_7 ---> 0.12348769350517956
+STORE_PROCESS_COMPUTE_0_5 ---> 0.06345487702283567
+STORE_PROCESS_COMPUTE_0_6 ---> 0.02649221673858848
+PATIENT_STATE_3_3 ---> 1.9066012204336502
+PATIENT_STATE_3_2 ---> 1.8526364363911256
+PATIENT_STATE_3_1 ---> 2.192503663381044
+PATIENT_STATE_3_0 ---> 1.2364750554126962
+STORE_PROCESS_COMPUTE_0_3 ---> 0.051030990416218426
+STORE_PROCESS_COMPUTE_0_4 ---> 0.06794098247118885
+STORE_PROCESS_COMPUTE_0_1 ---> 0.13984976047138503
+STORE_PROCESS_COMPUTE_0_2 ---> 0.10822013032441574
+STORE_PROCESS_COMPUTE_0_0 ---> 0.17498897261984653
+ECG_1_7 ---> 2.0
+ECG_1_6 ---> 2.0
+ECG_1_5 ---> 2.0
+ECG_1_4 ---> 2.0
+PATIENT_STATE_0_7 ---> 4.241822650904562
+ECG_1_3 ---> 4.9977327520827
+ENHANCED_SENSOR_2_5 ---> 0.2585907529916003
+ECG_1_2 ---> 4.369060537018269
+ENHANCED_SENSOR_2_6 ---> 0.6812244425999233
+ECG_1_1 ---> 4.252016125367762
+ENHANCED_SENSOR_2_7 ---> 0.7032429077067821
+ECG_1_0 ---> 3.848596711655095
+ENHANCED_SENSOR_2_4 ---> 0.21873810257627188
+PATIENT_STATE_0_6 ---> 1.3895801943955122
+PATIENT_STATE_0_5 ---> 1.498672177004531
+PATIENT_STATE_0_4 ---> 3.2317598282073696
+PATIENT_STATE_0_3 ---> 2.0495808173694914
+PATIENT_STATE_0_2 ---> 3.4080687770348908
+PATIENT_STATE_0_1 ---> 2.1360934874355397
+PATIENT_STATE_0_0 ---> 3.9909146846488572
+STORE_PROCESS_COMPUTE_1_2 ---> 0.09129117301049862
+STORE_PROCESS_COMPUTE_1_3 ---> 0.10903457318582097
+STORE_PROCESS_COMPUTE_1_0 ---> 0.1412874988120228
+STORE_PROCESS_COMPUTE_1_1 ---> 0.06702973864721945
+ECG_2_7 ---> 4.885624998395517
+ECG_2_6 ---> 4.9224990441731755
+ECG_2_5 ---> 4.992460937417164
+ECG_2_4 ---> 4.97521972654649
+ECG_2_3 ---> 2.0
+ECG_2_2 ---> 2.0
+ENHANCED_SENSOR_3_5 ---> 0.6031295962398613
+ECG_2_1 ---> 2.0
+ENHANCED_SENSOR_3_4 ---> 0.6500426588858569
+ECG_2_0 ---> 2.0
+ENHANCED_SENSOR_3_7 ---> 0.4063384819209192
+ENHANCED_SENSOR_3_6 ---> 0.4290344438805205
+ENHANCED_SENSOR_3_1 ---> 0.2827841191226069
+ENHANCED_SENSOR_3_0 ---> 0.26392310563178856
+ENHANCED_SENSOR_3_3 ---> 0.6411011096561787
+ENHANCED_SENSOR_3_2 ---> 0.6282023756002635
+=========================================
+cloud : Energy Consumed = 3069205.6961819762
+proxy-server : Energy Consumed = 214678.00000000172
+d-0 : Energy Consumed = 214677.99999999997
+m-0-0 : Energy Consumed = 175029.4599999991
+m-0-1 : Energy Consumed = 175029.4599999992
+m-0-2 : Energy Consumed = 174953.39503999913
+m-0-3 : Energy Consumed = 174953.39503999916
+m-0-4 : Energy Consumed = 174983.72125999894
+m-0-5 : Energy Consumed = 174998.91999999888
+m-0-6 : Energy Consumed = 174998.9199999989
+m-0-7 : Energy Consumed = 174925.90903999895
+d-1 : Energy Consumed = 214677.99999999994
+m-1-0 : Energy Consumed = 175029.45999999926
+m-1-1 : Energy Consumed = 175029.4599999992
+m-1-2 : Energy Consumed = 174953.39503999907
+m-1-3 : Energy Consumed = 174953.39503999913
+m-1-4 : Energy Consumed = 169181.05000000083
+m-1-5 : Energy Consumed = 169181.05000000083
+m-1-6 : Energy Consumed = 169181.05000000083
+m-1-7 : Energy Consumed = 169181.05000000083
+d-2 : Energy Consumed = 214677.99999999994
+m-2-0 : Energy Consumed = 169181.05000000083
+m-2-1 : Energy Consumed = 169181.05000000083
+m-2-2 : Energy Consumed = 169181.05000000083
+m-2-3 : Energy Consumed = 169181.05000000083
+m-2-4 : Energy Consumed = 174305.73325999896
+m-2-5 : Energy Consumed = 174003.60103999896
+m-2-6 : Energy Consumed = 174378.95799999897
+m-2-7 : Energy Consumed = 174378.95799999897
+d-3 : Energy Consumed = 214677.99999999994
+m-3-0 : Energy Consumed = 174244.724519999
+m-3-1 : Energy Consumed = 174409.49799999894
+m-3-2 : Energy Consumed = 174394.22799999893
+m-3-3 : Energy Consumed = 174122.6357799989
+m-3-4 : Energy Consumed = 174107.36577999897
+m-3-5 : Energy Consumed = 174183.644519999
+m-3-6 : Energy Consumed = 174275.193259999
+m-3-7 : Energy Consumed = 174363.6879999991
+Cost of execution in cloud = 574468.8350936545
+Total network usage = 1195135.0
+
+================================================================================
+STRUCTURED RESULT METRICS (PHASE 2 VALIDATED)
+Algorithm: LAMP
+Gateways: 4 | Mobiles/GW: 8 | Total Applications: 32
+Loop Delay (sim ticks): 614.8137
+Loops Completed: 24 / 32 (Total Executions: 2250)
+Cloud Energy (J): 3069205.6962
+Fog Energy (J): 6617845.5186
+Cloud Cost: 574468.835094
+Network Usage: 1195135.0000
+Fog Placements: 52
+Cloud Placements: 44
+Status: PARTIAL_COMPLETION
+================================================================================
+CSV_ROW:LAMP,4,8,32,614.8137,3069205.6962,6617845.5186,574468.835094,1195135.0000,52,44,PARTIAL_COMPLETION
+

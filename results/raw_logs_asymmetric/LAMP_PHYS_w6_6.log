@@ -1,0 +1,174 @@
+================================================================================
+ LAMP ASYMMETRIC TOPOLOGY EXPERIMENT RUNNER (PHASE 2.2)
+ Algorithm: LAMP_PHYS
+ Workload: Gateway 0 = 6 mobiles | Gateway 1 = 6 mobiles (Total: 12 Apps)
+ Simulation Duration: 2000 simulation ticks
+================================================================================
+Creating Cloud_Storage_0_0 on device cloud
+Creating Interface_0_0 on device m-0-0
+Creating Sensor_Analyzer_0_0 on device d-0
+Creating Cloud_Storage_0_1 on device cloud
+Creating Interface_0_1 on device m-0-1
+Creating Sensor_Analyzer_0_1 on device d-0
+Creating Interface_0_2 on device m-0-2
+Creating Cloud_Storage_0_2 on device cloud
+Creating Sensor_Analyzer_0_2 on device d-0
+Creating Cloud_Storage_0_3 on device cloud
+Creating Interface_0_3 on device m-0-3
+Creating Sensor_Analyzer_0_3 on device d-0
+Creating Sensor_Analyzer_0_4 on device cloud
+Creating Cloud_Storage_0_4 on device cloud
+Creating Interface_0_4 on device m-0-4
+Creating Sensor_Analyzer_0_5 on device cloud
+Creating Cloud_Storage_0_5 on device cloud
+Creating Interface_0_5 on device m-0-5
+Creating Cloud_Storage_1_0 on device cloud
+Creating Interface_1_0 on device m-1-0
+Creating Sensor_Analyzer_1_0 on device d-1
+Creating Interface_1_1 on device m-1-1
+Creating Cloud_Storage_1_1 on device cloud
+Creating Sensor_Analyzer_1_1 on device d-1
+Creating Cloud_Storage_1_2 on device cloud
+Creating Interface_1_2 on device m-1-2
+Creating Sensor_Analyzer_1_2 on device d-1
+Creating Cloud_Storage_1_3 on device cloud
+Creating Interface_1_3 on device m-1-3
+Creating Sensor_Analyzer_1_3 on device d-1
+Creating Sensor_Analyzer_1_4 on device cloud
+Creating Cloud_Storage_1_4 on device cloud
+Creating Interface_1_4 on device m-1-4
+Creating Sensor_Analyzer_1_5 on device cloud
+Creating Cloud_Storage_1_5 on device cloud
+Creating Interface_1_5 on device m-1-5
+
+[Candidate Evaluations via Equation 4 (PHYSICAL_SI)]
+  App app_0_4 (Local GW d-0 saturated). Candidate Ranking (PHYSICAL_SI): [cloud: t_a^m=0.1847 (Q=0.0781, delta=0.1040, Z=0.0026) | proxy-server: t_a^m=1.2566 (Q=1.2500, delta=0.0040, Z=0.0026) | d-1: t_a^m=1.2606 (Q=1.2500, delta=0.0080, Z=0.0026)]
+  App app_0_5 (Local GW d-0 saturated). Candidate Ranking (PHYSICAL_SI): [cloud: t_a^m=0.1847 (Q=0.0781, delta=0.1040, Z=0.0026) | proxy-server: t_a^m=1.2566 (Q=1.2500, delta=0.0040, Z=0.0026) | d-1: t_a^m=1.2606 (Q=1.2500, delta=0.0080, Z=0.0026)]
+  App app_1_4 (Local GW d-1 saturated). Candidate Ranking (PHYSICAL_SI): [cloud: t_a^m=0.1847 (Q=0.0781, delta=0.1040, Z=0.0026) | proxy-server: t_a^m=1.2566 (Q=1.2500, delta=0.0040, Z=0.0026) | d-0: t_a^m=1.2606 (Q=1.2500, delta=0.0080, Z=0.0026)]
+  App app_1_5 (Local GW d-1 saturated). Candidate Ranking (PHYSICAL_SI): [cloud: t_a^m=0.1847 (Q=0.0781, delta=0.1040, Z=0.0026) | proxy-server: t_a^m=1.2566 (Q=1.2500, delta=0.0040, Z=0.0026) | d-0: t_a^m=1.2606 (Q=1.2500, delta=0.0080, Z=0.0026)]
+
+[Placement Distribution Details]
+  Sensor_Analyzer on Local Gateway: 8
+  Sensor_Analyzer on Peer Gateway:  0
+  Sensor_Analyzer on Proxy Server:  0
+  Sensor_Analyzer on Cloud DC:      4
+  Total Analyzers: 12 (Expected: 12)
+  Total Fog Modules:   20 (Interfaces=12, Fog Analyzers=8)
+  Total Cloud Modules: 16 (Cloud Storage=12, Cloud Analyzers=4)
+  Grand Total Modules: 36 (Expected: 36)
+0.0 Submitted application app_0_0
+0.0 Submitted application app_0_2
+0.0 Submitted application app_1_1
+0.0 Submitted application app_0_1
+0.0 Submitted application app_1_0
+0.0 Submitted application app_0_4
+0.0 Submitted application app_1_3
+0.0 Submitted application app_0_3
+0.0 Submitted application app_1_2
+0.0 Submitted application app_1_5
+0.0 Submitted application app_0_5
+0.0 Submitted application app_1_4
+=========================================
+============== RESULTS ==================
+=========================================
+EXECUTION TIME : 1961
+=========================================
+APPLICATION LOOP DELAYS
+=========================================
+[ECG_0_0, Interface_0_0, Sensor_Analyzer_0_0, Interface_0_0, DISPLAY_0_0] ---> 436.3160112359479
+[ECG_0_1, Interface_0_1, Sensor_Analyzer_0_1, Interface_0_1, DISPLAY_0_1] ---> 435.91424438198237
+[ECG_0_2, Interface_0_2, Sensor_Analyzer_0_2, Interface_0_2, DISPLAY_0_2] ---> 440.67320505616823
+[ECG_0_3, Interface_0_3, Sensor_Analyzer_0_3, Interface_0_3, DISPLAY_0_3] ---> 445.0839494381882
+[ECG_0_4, Interface_0_4, Sensor_Analyzer_0_4, Interface_0_4, DISPLAY_0_4] ---> 696.242264900658
+[ECG_0_5, Interface_0_5, Sensor_Analyzer_0_5, Interface_0_5, DISPLAY_0_5] ---> 697.8216887417228
+[ECG_1_0, Interface_1_0, Sensor_Analyzer_1_0, Interface_1_0, DISPLAY_1_0] ---> 438.0102893258342
+[ECG_1_1, Interface_1_1, Sensor_Analyzer_1_1, Interface_1_1, DISPLAY_1_1] ---> 437.9831235954694
+[ECG_1_2, Interface_1_2, Sensor_Analyzer_1_2, Interface_1_2, DISPLAY_1_2] ---> 436.7984016853905
+[ECG_1_3, Interface_1_3, Sensor_Analyzer_1_3, Interface_1_3, DISPLAY_1_3] ---> 443.36722033896837
+[ECG_1_4, Interface_1_4, Sensor_Analyzer_1_4, Interface_1_4, DISPLAY_1_4] ---> 697.7455132450225
+[ECG_1_5, Interface_1_5, Sensor_Analyzer_1_5, Interface_1_5, DISPLAY_1_5] ---> 699.3983245033002
+=========================================
+TUPLE CPU EXECUTION DELAY
+=========================================
+STORE_PROCESS_COMPUTE_0_5 ---> 0.04814256906132147
+STORE_PROCESS_COMPUTE_1_4 ---> 0.056535629883940945
+STORE_PROCESS_COMPUTE_1_5 ---> 0.054776991963558994
+PATIENT_STATE_1_5 ---> 2.1795930249173554
+PATIENT_STATE_0_5 ---> 2.9378516665556598
+PATIENT_STATE_1_4 ---> 1.479278182092966
+PATIENT_STATE_1_3 ---> 3.329286387905596
+PATIENT_STATE_0_4 ---> 3.6476108941822236
+PATIENT_STATE_1_2 ---> 1.13751340772218
+PATIENT_STATE_0_3 ---> 2.428313206039996
+PATIENT_STATE_0_2 ---> 3.4247510646537354
+PATIENT_STATE_1_1 ---> 2.7004003982105047
+PATIENT_STATE_0_1 ---> 2.8334843334593023
+PATIENT_STATE_1_0 ---> 3.340156759459692
+PATIENT_STATE_0_0 ---> 2.1766585788013773
+STORE_PROCESS_COMPUTE_1_2 ---> 0.07957298066265228
+STORE_PROCESS_COMPUTE_0_3 ---> 0.026841092123002307
+STORE_PROCESS_COMPUTE_0_4 ---> 0.0711193407787943
+STORE_PROCESS_COMPUTE_1_3 ---> 0.06441630352822614
+STORE_PROCESS_COMPUTE_1_0 ---> 0.05695496442665808
+STORE_PROCESS_COMPUTE_0_1 ---> 0.02369114681045592
+STORE_PROCESS_COMPUTE_0_2 ---> 0.022587239542657775
+STORE_PROCESS_COMPUTE_1_1 ---> 0.029349711021492007
+STORE_PROCESS_COMPUTE_0_0 ---> 0.043007218591453886
+ECG_1_5 ---> 4.739545287206596
+ECG_0_5 ---> 3.7948569082992565
+ECG_1_4 ---> 4.242436826022576
+ENHANCED_SENSOR_0_0 ---> 105.92249603243903
+ENHANCED_SENSOR_0_1 ---> 103.43556458501747
+ENHANCED_SENSOR_1_0 ---> 104.93391636730159
+ENHANCED_SENSOR_0_2 ---> 100.47165451729887
+ENHANCED_SENSOR_1_1 ---> 106.3815621354563
+ECG_0_4 ---> 4.662397276916185
+ECG_1_3 ---> 3.6862475510144033
+ECG_0_3 ---> 4.35253659892889
+ECG_1_2 ---> 4.928429465286006
+ECG_0_2 ---> 4.989128740593758
+ECG_1_1 ---> 4.945287964498939
+ECG_0_1 ---> 3.6148542657975233
+ECG_1_0 ---> 4.9440038031409
+ECG_0_0 ---> 4.975046541765293
+ENHANCED_SENSOR_0_3 ---> 104.95544889964668
+ENHANCED_SENSOR_1_2 ---> 104.97162689887467
+ENHANCED_SENSOR_1_3 ---> 108.57543027889808
+ENHANCED_SENSOR_0_4 ---> 0.24412013239793484
+ENHANCED_SENSOR_0_5 ---> 0.17392585614114708
+ENHANCED_SENSOR_1_4 ---> 0.23959033440885538
+ENHANCED_SENSOR_1_5 ---> 0.2937251610425945
+=========================================
+cloud : Energy Consumed = 2796451.015468256
+proxy-server : Energy Consumed = 166866.59999999995
+d-0 : Energy Consumed = 214678.0000000014
+m-0-0 : Energy Consumed = 174960.20036999873
+m-0-1 : Energy Consumed = 174466.27185999404
+m-0-2 : Energy Consumed = 174999.06251999925
+m-0-3 : Energy Consumed = 174999.06251999925
+m-0-4 : Energy Consumed = 174321.1457799992
+m-0-5 : Energy Consumed = 174409.49799999947
+d-1 : Energy Consumed = 214678.00000000134
+m-1-0 : Energy Consumed = 174953.9269449987
+m-1-1 : Energy Consumed = 174848.0142249954
+m-1-2 : Energy Consumed = 174999.06251999922
+m-1-3 : Energy Consumed = 174957.3067049961
+m-1-4 : Energy Consumed = 174409.49799999947
+m-1-5 : Energy Consumed = 174278.88096499813
+Cost of execution in cloud = 187778.65484116983
+Total network usage = 538356.0
+
+================================================================================
+ASYMMETRIC EXPERIMENT RESULTS
+Algorithm: LAMP_PHYS | Workload: [6_6] | Total Apps: 12
+Loop Delay (sim ticks): 516.3034
+Loops Completed: 12 / 12 (Executions: 2027)
+Analyzers -> Local GW: 8 | Peer GW: 0 | Proxy: 0 | Cloud: 4
+Total Modules -> Fog: 20 | Cloud: 16 | Total System: 36
+Cloud Energy (J): 2796451.0155
+Fog Energy (J): 2692824.5304
+Network Usage: 538356.0000
+Status: SUCCESS
+================================================================================
+ASYM_CSV_ROW:LAMP_PHYS,6_6,12,516.3034,2796451.0155,2692824.5304,187778.654841,538356.0000,8,0,0,4,20,16,36,SUCCESS
+

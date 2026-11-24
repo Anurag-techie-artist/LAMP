@@ -1,0 +1,72 @@
+================================================================================
+ LAMP HEALTHCARE BSN SIMULATION RUNNER
+ Algorithm: LAMP
+ Topologies: 2 Gateways x 2 Mobiles/GW = 4 Applications
+ Simulation Duration: 2000 time units
+================================================================================
+Creating Cloud_Storage on device cloud
+Creating Interface on device m-0-0
+Creating Sensor_Analyzer on device d-0
+Creating Interface on device m-0-1
+Creating Sensor_Analyzer on device d-0
+Creating Interface on device m-1-0
+Creating Sensor_Analyzer on device d-1
+Creating Interface on device m-1-1
+Creating Sensor_Analyzer on device d-1
+
+[LAMP Placement Distribution]
+  Fog Placements: 8
+  Cloud Placements: 1
+  Module Mapping Details:
+    Sensor_Analyzer@m-0-0 -> d-0
+    Sensor_Analyzer@m-0-1 -> d-0
+    Sensor_Analyzer@m-1-0 -> d-1
+    Interface@m-0-0 -> m-0-0
+    Sensor_Analyzer@m-1-1 -> d-1
+    Interface@m-0-1 -> m-0-1
+    Interface@m-1-0 -> m-1-0
+    Cloud_Storage@Global -> cloud
+    Interface@m-1-1 -> m-1-1
+
+0.0 Submitted application healthcare_bsn
+=========================================
+============== RESULTS ==================
+=========================================
+EXECUTION TIME : 583
+=========================================
+APPLICATION LOOP DELAYS
+=========================================
+[ECG, Interface, Sensor_Analyzer, Interface, DISPLAY] ---> 84.03654372175424
+=========================================
+TUPLE CPU EXECUTION DELAY
+=========================================
+PATIENT_STATE ---> 0.9823578926652865
+STORE_PROCESS_COMPUTE ---> 0.022321428571331126
+ECG ---> 3.6006692769728685
+ENHANCED_SENSOR ---> 119.67186690306542
+=========================================
+cloud : Energy Consumed = 2676102.0946427765
+proxy-server : Energy Consumed = 166866.59999999995
+d-0 : Energy Consumed = 214678.000000002
+m-0-0 : Energy Consumed = 174968.95171607067
+m-0-1 : Energy Consumed = 175029.45999999964
+d-1 : Energy Consumed = 214678.0000000021
+m-1-0 : Energy Consumed = 175029.45999999953
+m-1-1 : Energy Consumed = 175014.22217607131
+Cost of execution in cloud = 17157.399999971167
+Total network usage = 158577.0
+
+================================================================================
+STRUCTURED RESULT METRICS
+Algorithm: LAMP
+Gateways: 2 | Mobiles/GW: 2 | Total Applications: 4
+Loop Delay (ms): 84.03654372175424
+Cloud Energy (J): 2676102.0946427765
+Fog Energy (J): 1296264.693892145
+Cloud Cost: 17157.399999971167
+Network Usage: 158577.0
+Fog Placements: 8
+Cloud Placements: 1
+================================================================================
+CSV_ROW:LAMP,2,2,4,84.03654372175424,2676102.0946427765,1296264.693892145,17157.399999971167,158577.0,8,1,SUCCESS
+

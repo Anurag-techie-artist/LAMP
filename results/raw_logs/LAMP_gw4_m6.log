@@ -1,0 +1,174 @@
+================================================================================
+ LAMP HEALTHCARE BSN SIMULATION RUNNER
+ Algorithm: LAMP
+ Topologies: 4 Gateways x 6 Mobiles/GW = 24 Applications
+ Simulation Duration: 2000 time units
+================================================================================
+Creating Cloud_Storage on device cloud
+Creating Interface on device m-0-0
+Creating Sensor_Analyzer on device d-0
+Creating Interface on device m-0-1
+Creating Sensor_Analyzer on device d-0
+Creating Interface on device m-0-2
+Creating Sensor_Analyzer on device d-0
+Creating Interface on device m-0-3
+Creating Sensor_Analyzer on device d-0
+Creating Interface on device m-0-4
+Creating Sensor_Analyzer on device proxy-server
+Creating Interface on device m-0-5
+Creating Sensor_Analyzer on device proxy-server
+Creating Interface on device m-1-0
+Creating Sensor_Analyzer on device d-1
+Creating Interface on device m-1-1
+Creating Sensor_Analyzer on device d-1
+Creating Interface on device m-1-2
+Creating Sensor_Analyzer on device d-1
+Creating Interface on device m-1-3
+Creating Sensor_Analyzer on device d-1
+Creating Interface on device m-1-4
+Creating Sensor_Analyzer on device proxy-server
+Creating Interface on device m-1-5
+Creating Sensor_Analyzer on device proxy-server
+Creating Interface on device m-2-0
+Creating Sensor_Analyzer on device d-2
+Creating Interface on device m-2-1
+Creating Sensor_Analyzer on device d-2
+Creating Interface on device m-2-2
+Creating Sensor_Analyzer on device d-2
+Creating Interface on device m-2-3
+Creating Sensor_Analyzer on device d-2
+Creating Interface on device m-2-4
+Creating Sensor_Analyzer on device d-3
+Creating Interface on device m-2-5
+Creating Sensor_Analyzer on device d-3
+Creating Interface on device m-3-0
+Creating Sensor_Analyzer on device d-3
+Creating Interface on device m-3-1
+Creating Sensor_Analyzer on device d-3
+Creating Interface on device m-3-2
+Creating Sensor_Analyzer on device cloud
+Creating Interface on device m-3-3
+Creating Sensor_Analyzer on device cloud
+Creating Interface on device m-3-4
+Creating Sensor_Analyzer on device cloud
+Creating Interface on device m-3-5
+Creating Sensor_Analyzer on device cloud
+
+[LAMP Placement Distribution]
+  Fog Placements: 44
+  Cloud Placements: 5
+  Module Mapping Details:
+    Interface@m-0-4 -> m-0-4
+    Interface@m-2-2 -> m-2-2
+    Interface@m-0-5 -> m-0-5
+    Interface@m-2-3 -> m-2-3
+    Interface@m-2-4 -> m-2-4
+    Interface@m-2-5 -> m-2-5
+    Cloud_Storage@Global -> cloud
+    Sensor_Analyzer@m-2-4 -> d-3
+    Sensor_Analyzer@m-2-5 -> d-3
+    Interface@m-0-0 -> m-0-0
+    Sensor_Analyzer@m-0-2 -> d-0
+    Sensor_Analyzer@m-2-0 -> d-2
+    Interface@m-0-1 -> m-0-1
+    Sensor_Analyzer@m-0-3 -> d-0
+    Sensor_Analyzer@m-2-1 -> d-2
+    Interface@m-0-2 -> m-0-2
+    Sensor_Analyzer@m-0-4 -> proxy-server
+    Interface@m-2-0 -> m-2-0
+    Sensor_Analyzer@m-2-2 -> d-2
+    Interface@m-0-3 -> m-0-3
+    Sensor_Analyzer@m-0-5 -> proxy-server
+    Interface@m-2-1 -> m-2-1
+    Sensor_Analyzer@m-2-3 -> d-2
+    Sensor_Analyzer@m-1-0 -> d-1
+    Interface@m-1-3 -> m-1-3
+    Interface@m-3-1 -> m-3-1
+    Interface@m-1-4 -> m-1-4
+    Interface@m-3-2 -> m-3-2
+    Interface@m-1-5 -> m-1-5
+    Interface@m-3-3 -> m-3-3
+    Interface@m-3-4 -> m-3-4
+    Interface@m-3-5 -> m-3-5
+    Sensor_Analyzer@m-1-5 -> proxy-server
+    Sensor_Analyzer@m-3-3 -> cloud
+    Sensor_Analyzer@m-3-4 -> cloud
+    Sensor_Analyzer@m-3-5 -> cloud
+    Sensor_Analyzer@m-1-1 -> d-1
+    Interface@m-1-0 -> m-1-0
+    Sensor_Analyzer@m-1-2 -> d-1
+    Sensor_Analyzer@m-3-0 -> d-3
+    Interface@m-1-1 -> m-1-1
+    Sensor_Analyzer@m-1-3 -> d-1
+    Sensor_Analyzer@m-3-1 -> d-3
+    Interface@m-1-2 -> m-1-2
+    Sensor_Analyzer@m-1-4 -> proxy-server
+    Interface@m-3-0 -> m-3-0
+    Sensor_Analyzer@m-3-2 -> cloud
+    Sensor_Analyzer@m-0-0 -> d-0
+    Sensor_Analyzer@m-0-1 -> d-0
+
+0.0 Submitted application healthcare_bsn
+=========================================
+============== RESULTS ==================
+=========================================
+EXECUTION TIME : 16256
+=========================================
+APPLICATION LOOP DELAYS
+=========================================
+[ECG, Interface, Sensor_Analyzer, Interface, DISPLAY] ---> 1139.6493333333317
+=========================================
+TUPLE CPU EXECUTION DELAY
+=========================================
+PATIENT_STATE ---> 3.433257812500501
+STORE_PROCESS_COMPUTE ---> 0.022321428571331126
+ECG ---> 2.000045597555971
+ENHANCED_SENSOR ---> 1129.9999999999998
+=========================================
+cloud : Energy Consumed = 2755433.33035714
+proxy-server : Energy Consumed = 214677.99999999994
+d-0 : Energy Consumed = 214678.0000000021
+m-0-0 : Energy Consumed = 171627.30399999933
+m-0-1 : Energy Consumed = 171627.30399999933
+m-0-2 : Energy Consumed = 169181.12126000083
+m-0-3 : Energy Consumed = 169181.12126000083
+m-0-4 : Energy Consumed = 169181.12126000083
+m-0-5 : Energy Consumed = 169181.12126000083
+d-1 : Energy Consumed = 214678.0000000021
+m-1-0 : Energy Consumed = 171627.30399999933
+m-1-1 : Energy Consumed = 171627.30399999933
+m-1-2 : Energy Consumed = 169181.12126000083
+m-1-3 : Energy Consumed = 169181.12126000083
+m-1-4 : Energy Consumed = 169181.12126000083
+m-1-5 : Energy Consumed = 169181.12126000083
+d-2 : Energy Consumed = 214678.0000000021
+m-2-0 : Energy Consumed = 171627.30399999933
+m-2-1 : Energy Consumed = 171627.30399999933
+m-2-2 : Energy Consumed = 169181.12126000083
+m-2-3 : Energy Consumed = 169181.12126000083
+m-2-4 : Energy Consumed = 169181.12126000083
+m-2-5 : Energy Consumed = 169181.12126000083
+d-3 : Energy Consumed = 214678.0000000021
+m-3-0 : Energy Consumed = 171627.30399999933
+m-3-1 : Energy Consumed = 171627.30399999933
+m-3-2 : Energy Consumed = 169181.12126000083
+m-3-3 : Energy Consumed = 169181.12126000083
+m-3-4 : Energy Consumed = 169181.12126000083
+m-3-5 : Energy Consumed = 169181.12126000083
+Cost of execution in cloud = 129626.99999999892
+Total network usage = 8024.0
+
+================================================================================
+STRUCTURED RESULT METRICS
+Algorithm: LAMP
+Gateways: 4 | Mobiles/GW: 6 | Total Applications: 24
+Loop Delay (ms): 1139.6493333333317
+Cloud Energy (J): 2755433.33035714
+Fog Energy (J): 5153306.372160016
+Cloud Cost: 129626.99999999892
+Network Usage: 8024.0
+Fog Placements: 44
+Cloud Placements: 5
+================================================================================
+CSV_ROW:LAMP,4,6,24,1139.6493333333317,2755433.33035714,5153306.372160016,129626.99999999892,8024.0,44,5,SUCCESS
+

@@ -1,0 +1,112 @@
+================================================================================
+ LAMP HEALTHCARE BSN SIMULATION RUNNER
+ Algorithm: LAMP
+ Topologies: 2 Gateways x 6 Mobiles/GW = 12 Applications
+ Simulation Duration: 2000 time units
+================================================================================
+Creating Cloud_Storage on device cloud
+Creating Interface on device m-0-0
+Creating Sensor_Analyzer on device d-0
+Creating Interface on device m-0-1
+Creating Sensor_Analyzer on device d-0
+Creating Interface on device m-0-2
+Creating Sensor_Analyzer on device d-0
+Creating Interface on device m-0-3
+Creating Sensor_Analyzer on device d-0
+Creating Interface on device m-0-4
+Creating Sensor_Analyzer on device proxy-server
+Creating Interface on device m-0-5
+Creating Sensor_Analyzer on device proxy-server
+Creating Interface on device m-1-0
+Creating Sensor_Analyzer on device d-1
+Creating Interface on device m-1-1
+Creating Sensor_Analyzer on device d-1
+Creating Interface on device m-1-2
+Creating Sensor_Analyzer on device d-1
+Creating Interface on device m-1-3
+Creating Sensor_Analyzer on device d-1
+Creating Interface on device m-1-4
+Creating Sensor_Analyzer on device proxy-server
+Creating Interface on device m-1-5
+Creating Sensor_Analyzer on device proxy-server
+
+[LAMP Placement Distribution]
+  Fog Placements: 24
+  Cloud Placements: 1
+  Module Mapping Details:
+    Interface@m-0-4 -> m-0-4
+    Interface@m-1-3 -> m-1-3
+    Interface@m-0-5 -> m-0-5
+    Interface@m-1-4 -> m-1-4
+    Interface@m-1-5 -> m-1-5
+    Cloud_Storage@Global -> cloud
+    Sensor_Analyzer@m-1-5 -> proxy-server
+    Interface@m-0-0 -> m-0-0
+    Sensor_Analyzer@m-0-2 -> d-0
+    Sensor_Analyzer@m-1-1 -> d-1
+    Interface@m-0-1 -> m-0-1
+    Sensor_Analyzer@m-0-3 -> d-0
+    Interface@m-1-0 -> m-1-0
+    Sensor_Analyzer@m-1-2 -> d-1
+    Interface@m-0-2 -> m-0-2
+    Sensor_Analyzer@m-0-4 -> proxy-server
+    Interface@m-1-1 -> m-1-1
+    Sensor_Analyzer@m-1-3 -> d-1
+    Interface@m-0-3 -> m-0-3
+    Sensor_Analyzer@m-0-5 -> proxy-server
+    Interface@m-1-2 -> m-1-2
+    Sensor_Analyzer@m-1-4 -> proxy-server
+    Sensor_Analyzer@m-0-0 -> d-0
+    Sensor_Analyzer@m-0-1 -> d-0
+    Sensor_Analyzer@m-1-0 -> d-1
+
+0.0 Submitted application healthcare_bsn
+=========================================
+============== RESULTS ==================
+=========================================
+EXECUTION TIME : 6883
+=========================================
+APPLICATION LOOP DELAYS
+=========================================
+[ECG, Interface, Sensor_Analyzer, Interface, DISPLAY] ---> 1139.6493333333317
+=========================================
+TUPLE CPU EXECUTION DELAY
+=========================================
+PATIENT_STATE ---> 3.2321250000004653
+STORE_PROCESS_COMPUTE ---> 0.022321428571331126
+ECG ---> 2.010989010989011
+ENHANCED_SENSOR ---> 1129.9999999999998
+=========================================
+cloud : Energy Consumed = 2682337.4517857134
+proxy-server : Energy Consumed = 214677.99999999994
+d-0 : Energy Consumed = 214678.0000000021
+m-0-0 : Energy Consumed = 171627.30399999933
+m-0-1 : Energy Consumed = 171627.30399999933
+m-0-2 : Energy Consumed = 169181.12126000083
+m-0-3 : Energy Consumed = 169181.12126000083
+m-0-4 : Energy Consumed = 169181.12126000083
+m-0-5 : Energy Consumed = 169181.12126000083
+d-1 : Energy Consumed = 214678.0000000021
+m-1-0 : Energy Consumed = 171627.30399999933
+m-1-1 : Energy Consumed = 171627.30399999933
+m-1-2 : Energy Consumed = 169181.12126000083
+m-1-3 : Energy Consumed = 169181.12126000083
+m-1-4 : Energy Consumed = 169181.12126000083
+m-1-5 : Energy Consumed = 169181.12126000083
+Cost of execution in cloud = 25997.39999999947
+Total network usage = 3820.0
+
+================================================================================
+STRUCTURED RESULT METRICS
+Algorithm: LAMP
+Gateways: 2 | Mobiles/GW: 6 | Total Applications: 12
+Loop Delay (ms): 1139.6493333333317
+Cloud Energy (J): 2682337.4517857134
+Fog Energy (J): 2683992.1860800083
+Cloud Cost: 25997.39999999947
+Network Usage: 3820.0
+Fog Placements: 24
+Cloud Placements: 1
+================================================================================
+CSV_ROW:LAMP,2,6,12,1139.6493333333317,2682337.4517857134,2683992.1860800083,25997.39999999947,3820.0,24,1,SUCCESS
+

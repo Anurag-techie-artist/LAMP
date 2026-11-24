@@ -1,0 +1,106 @@
+================================================================================
+ LAMP HEALTHCARE BSN SIMULATION RUNNER (PHASE 2 VALIDATED)
+ Algorithm: COMP
+ Topologies: 3 Gateways x 2 Mobiles/GW = 6 Applications
+ Simulation Duration: 2000 simulation ticks
+================================================================================
+Creating Sensor_Analyzer_0_0 on device cloud
+Creating Cloud_Storage_0_0 on device cloud
+Creating Interface_0_0 on device m-0-0
+Creating Sensor_Analyzer_0_1 on device cloud
+Creating Cloud_Storage_0_1 on device cloud
+Creating Interface_0_1 on device m-0-1
+Creating Sensor_Analyzer_1_0 on device cloud
+Creating Cloud_Storage_1_0 on device cloud
+Creating Interface_1_0 on device m-1-0
+Creating Interface_1_1 on device m-1-1
+Creating Sensor_Analyzer_1_1 on device cloud
+Creating Cloud_Storage_1_1 on device cloud
+Creating Interface_2_0 on device m-2-0
+Creating Sensor_Analyzer_2_0 on device cloud
+Creating Cloud_Storage_2_0 on device cloud
+Creating Sensor_Analyzer_2_1 on device cloud
+Creating Cloud_Storage_2_1 on device cloud
+Creating Interface_2_1 on device m-2-1
+
+[COMP Placement Distribution]
+  Fog Placements: 6
+  Cloud Placements: 12
+  Total Modules: 18 (Expected: 18)
+0.0 Submitted application app_0_0
+0.0 Submitted application app_1_1
+0.0 Submitted application app_2_0
+0.0 Submitted application app_0_1
+0.0 Submitted application app_1_0
+0.0 Submitted application app_2_1
+=========================================
+============== RESULTS ==================
+=========================================
+EXECUTION TIME : 1216
+=========================================
+APPLICATION LOOP DELAYS
+=========================================
+[ECG_0_0, Interface_0_0, Sensor_Analyzer_0_0, Interface_0_0, DISPLAY_0_0] ---> 220.68057608695688
+[ECG_0_1, Interface_0_1, Sensor_Analyzer_0_1, Interface_0_1, DISPLAY_0_1] ---> 220.6633318857082
+[ECG_1_0, Interface_1_0, Sensor_Analyzer_1_0, Interface_1_0, DISPLAY_1_0] ---> 220.71000000000032
+[ECG_1_1, Interface_1_1, Sensor_Analyzer_1_1, Interface_1_1, DISPLAY_1_1] ---> 218.8969387697661
+[ECG_2_0, Interface_2_0, Sensor_Analyzer_2_0, Interface_2_0, DISPLAY_2_0] ---> 220.71000000000032
+[ECG_2_1, Interface_2_1, Sensor_Analyzer_2_1, Interface_2_1, DISPLAY_2_1] ---> 220.69531896190284
+=========================================
+TUPLE CPU EXECUTION DELAY
+=========================================
+ENHANCED_SENSOR_0_0 ---> 0.07812501431935744
+ENHANCED_SENSOR_0_1 ---> 0.07812502342334744
+ENHANCED_SENSOR_1_0 ---> 0.07812504726579003
+ENHANCED_SENSOR_1_1 ---> 0.078125
+ENHANCED_SENSOR_2_0 ---> 0.20624998807964923
+PATIENT_STATE_2_1 ---> 3.9084303060616326
+PATIENT_STATE_1_1 ---> 3.1390343778542498
+PATIENT_STATE_2_0 ---> 2.8390343778547584
+PATIENT_STATE_0_1 ---> 2.124153854399092
+PATIENT_STATE_1_0 ---> 1.7866538543994308
+PATIENT_STATE_0_0 ---> 1.1996435326052775
+STORE_PROCESS_COMPUTE_2_1 ---> 0.04464285182104634
+ECG_2_1 ---> 4.137833428205918
+ECG_1_1 ---> 2.9888608253225275
+ECG_2_0 ---> 3.619250142309057
+STORE_PROCESS_COMPUTE_0_1 ---> 0.02232143356072626
+STORE_PROCESS_COMPUTE_1_0 ---> 0.022321438882736595
+ECG_0_1 ---> 3.0647497795755747
+ECG_1_0 ---> 3.213346145601016
+STORE_PROCESS_COMPUTE_1_1 ---> 0.022321428571331126
+STORE_PROCESS_COMPUTE_2_0 ---> 0.044642857143067816
+ECG_0_0 ---> 3.8192627173951603
+ENHANCED_SENSOR_2_1 ---> 0.1562499813735485
+STORE_PROCESS_COMPUTE_0_0 ---> 0.022321431066023124
+=========================================
+cloud : Energy Consumed = 2774262.813458282
+proxy-server : Energy Consumed = 166866.59999999995
+d-0 : Energy Consumed = 166866.59999999995
+m-0-0 : Energy Consumed = 174409.49800000046
+m-0-1 : Energy Consumed = 174409.4980000007
+d-1 : Energy Consumed = 166866.59999999995
+m-1-0 : Energy Consumed = 174409.49799999982
+m-1-1 : Energy Consumed = 174409.4980000005
+d-2 : Energy Consumed = 166866.59999999995
+m-2-0 : Energy Consumed = 174409.49799999944
+m-2-1 : Energy Consumed = 174409.49799999903
+Cost of execution in cloud = 156321.96338406246
+Total network usage = 331952.5
+
+================================================================================
+STRUCTURED RESULT METRICS (PHASE 2 VALIDATED)
+Algorithm: COMP
+Gateways: 3 | Mobiles/GW: 2 | Total Applications: 6
+Loop Delay (sim ticks): 220.3927
+Loops Completed: 6 / 6 (Total Executions: 2070)
+Cloud Energy (J): 2774262.8135
+Fog Energy (J): 1713923.3880
+Cloud Cost: 156321.963384
+Network Usage: 331952.5000
+Fog Placements: 6
+Cloud Placements: 12
+Status: SUCCESS
+================================================================================
+CSV_ROW:COMP,3,2,6,220.3927,2774262.8135,1713923.3880,156321.963384,331952.5000,6,12,SUCCESS
+

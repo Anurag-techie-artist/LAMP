@@ -1,0 +1,113 @@
+=== SECTION II: RELATED WORK ===
+II. RELATED WORK
+Fog computing is a new topic for researchers. Current
+research focuses on deﬁning the architecture of the fog
+computing [ 10, 11, 12, 13], assessing its suitability for the
+IoT [ 14, 15, 16], introducing platforms for simulating this
+environment [ 17, 18, 19], considering safety and privacy
+[20, 21, 22, 23], resource management in fog computing,
+978-1-7281-0872-8/19/$31.00 2019 IEEE
+845
+=== PAGE 2 ===
+programming approaches for the development of the IoT
+applications [24], and so on. For example, Mahmoud et al. [5],
+have classiﬁed information on the challenges of fog computing
+as an intermediate layer between IoT devices and cloud data
+centers. Skarlat et al .[25], have introduced an architecture for
+the fog computing framework and a service optimization
+problem in fog and presented several approaches to problem-
+solving, including genetic algorithm, and the results in both
+cloud and fog computing environments. The reference [ 26],
+based on the requirements for the development, deployment,
+and management of IoT applications for component-based
+content, proposes a platform architecture as a service to facil-
+itate the implementation of applications in the fog computing
+environment.
+One of the most important issues in fog computing is place-
+ment application modules on the fog network devices, which
+Hong et al .[27] have introduced a dynamic distribution algo-
+rithm for the fog computing and then compared in real terms
+to the optimal solution, with efﬁcient results the algorithm
+is represented. Taneja et al .[3] presented a module mapping
+algorithm for the placement of application modules in dis-
+tributed cloud-fog devices. Their goal was to make good use of
+resources on the network. This algorithm maps the application
+modules and fog devices according to the existing requirements
+and capacity. They have also shown that in a delay, a cloud-
+fog approach is more effective than the cloud-only approach.
+But they focus more on reducing the use of resources for
+distributed applications and the delay is not taken. Gupta et
+al.[2] have introduced ifogsim to model and simulate the fog
+environment, the IoT and the edge of the network. In this
+simulator, you can evaluate resource management techniques
+based on service quality criteria, such as delays in various work
+volumes in the fog.
+Our current work and the work of others to enable the use
+of fog computing as a platform provide better service to
+the end user and increase the network efﬁciency of existing
+infrastructure and intelligent technology scenarios.
+
+
+=== SECTION V: EVALUATION RESULTS ===
+V. EVALUATION RESULTS AND ANALYSIS
+We employ iFogsim simulator to evaluation and investiga-
+tion of LAMP algorithm. The iFogsim was developed by Gupat
+et al . [ 2] based on cloudsim. IoT applications run on network
+topologies provided by iFogsim. A summary of the experimen-
+tal setup can be found in Tables III and IV. The simulation runs
+on topologies with 2, 3, and 4 fog devices. Each fog device
+supports 2, 4, 6 and 8 end devices. We assume each end device
+represents an application. The LAMP algorithm in terms of
+delay, cloud energy consumption, Fog energy consumption,
+cloud cost, and total network usage compares with four other
+algorithms include Cloud-Only Module Placement (COMP),
+Lower-Bound Module Placement (LBMP) which is introduced
+in [ 3], Simulated-Annealing Module Placement (SAMP) in
+[9] and Edge-Wards Module Placement (EWMP) algorithm.
+The simulation results show the performance of the proposed
+algorithm in comparison with all network topologies on the
+comparison criteria in, especially when the number of appli-
+cations increases. As can be seen in Fig 3, when is the number
+of applications in each fog devices is less than 4, the EWMP
+algorithm responses are in the good condition. But, when
+the number of these applications increases per fog device,
+its performance drops sharply. V ersus, LAMP algorithm better
+results at the highest number of applications and has a very
+favorable effect and can be seen that the delay has a signiﬁcant
+decrease.
+As can be seen in Fig 4, With placing module near-application
+devices, the algorithm has been able to reduce the average
+delay by up to 40 % for the COMP and up to 20 % for
+other algorithms. Of course, as you can see, the effect of
+the proposed algorithm is more evident when the number
+of devices in the network is limited and the number of
+applications increases.
+and it is clear that, according to Fig. 5, energy consumption in
+fog increases, but given the only 5% increase in fog computing
+(on average), the proposed algorithm is acceptable in this
+regard. Network usage means using the network resources,
+which increases the use of network resources as costs increase.
+Efﬁcient network technologies prefer to use minimum network
+848
+=== PAGE 5 ===
+Fig. 3. The average delay of the control loop
+Fig. 4. Cloud power consumption execution time in fog computing
+resources to reduce network trafﬁc and cost. As displayed in
+Figures 6, the cost of the network in cloud averaged up to 50%
+in the COMP and 30% in comparison with other algorithms.
+Furthermore, Figure 7, proposed a proper use of network
+resources in the fog and cloud by an average of 60% compared
+to the COMP and 35% compared to other algorithms. Also,
+the LAMP algorithm and LBMP , because they consider the
+proper use of resources, provide better response in these situ-
+ations. As mentioned above, in order to achieve the beneﬁts
+of fog computing, it’s best to process applications close to
+the devices where the data have been generated. Moreover,
+applications should be distributed between fog computing and
+cloud computing. since these devices have limited capacity, as
+shown in Fig. 8, the proposed algorithm and algorithm LBMP
+have been able to create a good balance between cloud and
+fog.
+Fig. 5. Fog power consumption execution time in fog computing
+Fig. 6. Comparison of costs of cloud in Fog execution
+Fig. 7. Network usage in Fog execution

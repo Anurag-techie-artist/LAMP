@@ -1,0 +1,62 @@
+================================================================================
+ LAMP HEALTHCARE BSN SIMULATION RUNNER
+ Algorithm: COMP
+ Topologies: 2 Gateways x 4 Mobiles/GW = 8 Applications
+ Simulation Duration: 2000 time units
+================================================================================
+Creating Cloud_Storage on device cloud
+Creating Sensor_Analyzer on device cloud
+Creating Interface on device m-0-2
+Creating Interface on device m-1-1
+Creating Interface on device m-0-1
+Creating Interface on device m-1-0
+Creating Interface on device m-1-3
+Creating Interface on device m-0-3
+Creating Interface on device m-1-2
+Creating Interface on device m-0-0
+0.0 Submitted application healthcare_bsn
+=========================================
+============== RESULTS ==================
+=========================================
+EXECUTION TIME : 1034
+=========================================
+APPLICATION LOOP DELAYS
+=========================================
+[ECG, Interface, Sensor_Analyzer, Interface, DISPLAY] ---> 408.2879935184826
+=========================================
+TUPLE CPU EXECUTION DELAY
+=========================================
+PATIENT_STATE ---> 2.8779857874833508
+STORE_PROCESS_COMPUTE ---> 0.26371547966511955
+ECG ---> 3.9129129768234794
+ENHANCED_SENSOR ---> 1.160019456479071
+=========================================
+cloud : Energy Consumed = 3200214.4467856456
+proxy-server : Energy Consumed = 166866.59999999995
+d-0 : Energy Consumed = 166866.59999999995
+m-0-0 : Energy Consumed = 174354.86193999913
+m-0-1 : Energy Consumed = 174371.56731999648
+m-0-2 : Energy Consumed = 174257.8465399896
+m-0-3 : Energy Consumed = 174350.84083999653
+d-1 : Energy Consumed = 166866.59999999995
+m-1-0 : Energy Consumed = 174243.05499999496
+m-1-1 : Energy Consumed = 174284.3247199935
+m-1-2 : Energy Consumed = 174170.75663999253
+m-1-3 : Energy Consumed = 174363.83051999967
+Cost of execution in cloud = 760202.7599999396
+Total network usage = 432380.0
+
+================================================================================
+STRUCTURED RESULT METRICS
+Algorithm: COMP
+Gateways: 2 | Mobiles/GW: 4 | Total Applications: 8
+Loop Delay (ms): 408.2879935184826
+Cloud Energy (J): 3200214.4467856456
+Fog Energy (J): 1894996.883519962
+Cloud Cost: 760202.7599999396
+Network Usage: 432380.0
+Fog Placements: 8
+Cloud Placements: 9
+================================================================================
+CSV_ROW:COMP,2,4,8,408.2879935184826,3200214.4467856456,1894996.883519962,760202.7599999396,432380.0,8,9,SUCCESS
+

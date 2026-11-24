@@ -1,0 +1,5 @@
+﻿Algorithm,WorkloadLabel,TotalApplications,LoopDelay,CloudEnergy,FogEnergy,CloudCost,NetworkUsage,AnalyzerLocalGw,AnalyzerPeerGw,AnalyzerProxy,CloudSelectedNormal,CloudFallback,PlannedFogModules,PlannedCloudModules,PlannedSystemModules,VmInstantiationSuccess,VmInstantiationFailure,BinarySearchCount,LinearFallbackCount,CloudFallbackDemandMips,CloudFallbackDemandRam,CloudFallbackDemandBw,CompletedLoops,Status
+LBMP_PURE,2_6,8,107.2523,2713161.7000,1949157.7898,69697.600000,276976.5000,6,2,0,0,0,16,8,24,24,0,8,0,0.0,0,0,6,PARTIAL_COMPLETION
+LBMP_PURE,6_2,8,106.8902,2834438.0986,1949022.2024,241633.760000,277099.0000,6,2,0,0,0,16,8,24,24,0,8,0,0.0,0,0,6,PARTIAL_COMPLETION
+LBMP_PURE,6_6,12,383.6551,2721913.8843,2730994.9517,82105.760000,446086.0000,6,2,4,0,0,24,12,36,36,0,12,0,0.0,0,0,10,PARTIAL_COMPLETION
+LBMP_PURE,10_2,12,283.9960,2733554.5343,2708529.4066,98608.960000,382053.0000,4,4,4,0,0,24,12,36,36,0,12,0,0.0,0,0,8,PARTIAL_COMPLETION

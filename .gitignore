@@ -1,0 +1,93 @@
+# ==============================================================================
+# LAMP Edge Computing Research Project — .gitignore
+# ==============================================================================
+# This repository archives the complete experimental reproduction, empirical
+# benchmarks, and formal research reports for the LAMP Edge Computing study.
+#
+# Heavy external execution runtimes (iFogSim2 framework and Eclipse IDE) are
+# excluded and must be acquired separately per their respective open-source
+# distributions. All datasets, raw simulation logs, analytical scripts,
+# figures, validation records, and manuscript deliverables are tracked.
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. External Simulator & IDE Runtimes (Obtain Separately)
+# ------------------------------------------------------------------------------
+iFogSim-main/
+eclipse-java-2025-03-R-win32-x86_64/
+.metadata/
+
+# ------------------------------------------------------------------------------
+# 2. Java Compiled Bytecode & Build Artifacts
+# ------------------------------------------------------------------------------
+*.class
+bin/
+build/
+target/
+*.jar
+*.war
+*.ear
+
+# ------------------------------------------------------------------------------
+# 3. IDE, Editor, & Toolchain Configurations
+# ------------------------------------------------------------------------------
+.classpath
+.project
+.settings/
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+*.sublime-project
+*.sublime-workspace
+
+# ------------------------------------------------------------------------------
+# 4. Python Bytecode, Caches, & Virtual Environments
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+venv/
+.env
+.venv/
+env/
+
+# ------------------------------------------------------------------------------
+# 5. OS-Generated Files, System Clutter, & Editor Swaps
+# ------------------------------------------------------------------------------
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+$RECYCLE.BIN/
+
+# ------------------------------------------------------------------------------
+# 6. Scratch & Reproducible Visual Inspection Renders
+# ------------------------------------------------------------------------------
+# Intermediate workspace scratch files
+scratch/
+
+# Intermediate visual audit inspection page renders (reproducible from PDFs)
+ieee_paper/rendered_pages/
+ieee_paper/rendered_revised_pages/
+
+# ------------------------------------------------------------------------------
+# 7. Explicit Retention Safeguards (Preserve Research Deliverables)
+# ------------------------------------------------------------------------------
+# Ensure results, demonstrations, and figures are never inadvertently excluded
+!results/
+!results/**
+!demonstration_results/
+!demonstration_results/**
+!ieee_paper/figures/
+!ieee_paper/figures/**
+!PHASE_3_5_CODE_REVIEW.zip
